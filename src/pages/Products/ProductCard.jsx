@@ -26,15 +26,15 @@ const ProductCard = ({ title, image, details, position }) => {
         {/* // Large Screens - Position: left */}
         {position === 'left' && (
           <div className="hidden flex lg:block h-screen">
-            <div className="relative top-[170px] left-20 xl:left-28 text-left w-1/2">
-            <p className="text-5xl xl:text-8xl mb-4 py-4">{title}</p>
+            <div className="relative top-[30vh] left-10 xl:left-20 text-left w-[30vw]">
+            <p className="text-5xl xl:text-6xl mb-4 py-4">{title}</p>
               <p className="text-xl">{details}</p>
             </div>
-            <div className="flex flex-row justify-center w-1/3 xl:w-1/2">
+            <div className="flex flex-row justify-center w-1/3 xl:w-[70vw]">
               <img
                 src={image}
                 alt={title}
-                className="relative bottom-[200px] left-[600px] xl:left-[700px] 2xl:left-[900px] w-[50vh] h-[50vh] hover:scale-110 transform transition duration-500 ease-in-out"
+                className="relative bottom-[100px] left-[450px]  w-[70vh] h-[70vh] hover:scale-110 transform transition duration-500 ease-in-out"
               />
             </div>
           </div>
@@ -48,11 +48,11 @@ const ProductCard = ({ title, image, details, position }) => {
                 <img
                   src={image}
                   alt={title}
-                  className="relative top-[170px] left-[50px] xl:left-[100px] 2xl:left-[200px] w-[50vh] h-[50vh] hover:scale-110 transform transition duration-500 ease-in-out"
+                  className="relative top-[100px] left-[50px] xl:left-[100px]  w-[60vh] h-[60vh] hover:scale-110 transform transition duration-500 ease-in-out"
                 />
               </div>
-              <div className="relative text-left top-[170px] left-[200px] xl:left-[200px] 2xl:left-[300px] w-1/2">
-                <p className="text-5xl xl:text-8xl mb-4 py-4">{title}</p>
+              <div className="relative text-left top-[170px] left-[200px] xl:left-[300px] 2xl:left-[300px] w-1/2">
+                <p className="text-4xl xl:text-6xl mb-4 py-4">{title}</p>
                 <p className="text-xl">{details}</p>
               </div>
             </div>
