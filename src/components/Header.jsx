@@ -60,7 +60,7 @@ const Header = ({ activeTab, toggle }) => {
     return (
         <header
             ref={headerRef}
-            className={`bg-black text-white absolute p-2 top-0 w-full z-30 transition-transform ${isHeaderVisible ? 'transform translateY(0)' : 'transform translateY(-100%)'
+            className={` text-white absolute p-2 top-0 w-full z-30 transition-transform ${isHeaderVisible ? 'transform translateY(0)' : 'transform translateY(-100%)'
                 }`}
         >
             <div className="mx-auto flex justify-between items-center p-2">
@@ -130,7 +130,7 @@ const Header = ({ activeTab, toggle }) => {
 
                 </nav>
                 <nav
-                    className={`absolute right-4 top-20 mt-2 w-5/6 truncate text-center bg-black text-2xl text-white font-krona border border-gray-300 rounded-lg shadow-lg overflow-hidden ${dropDown ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                    className={`absolute right-4 top-20 mt-2 w-5/6 truncate text-center bg-transparent text-2xl text-white font-krona border border-gray-300 rounded-lg shadow-lg overflow-hidden ${dropDown ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
                         } transition-all duration-300 transform origin-top lg:hidden`}
                 >
                     <Link to="/" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'home' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('home'); toggleDropDown(); }}> Home </Link>

@@ -26,7 +26,7 @@ function App() {
     <Router>
       <div className="bg-black">
         <Header activeTab={activeTab} toggle={toggle} />
-        <main className="absolute top-20 left-0 right-0 bg-black">
+        <main className="absolute top-0 left-0 right-0 bg-black">
           <Routes>
             <Route path="/" element={<div><Home /><Satellite /><TechProd /><Footer /></div>} />
             {/* <Route path="/technology" element={<div><Technology /><EarthSat /><SatelliteConstellation /><Aeroplane /><GroundSatellite /><Footer /></div>} /> */}

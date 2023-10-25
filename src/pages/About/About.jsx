@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/logo.jpg';
+import logo from '../../assets/logo_nobg.png';
 import logo_nobg from '../../assets/logo_nobg.png';
 import james from '../../assets/james.jpg';
 import suman from '../../assets/suman.jpg';
@@ -13,8 +13,9 @@ const AboutUs = () => {
           className="w-full h-full"
           style={{
             backgroundImage: `url(${logo})`,
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
             backgroundPosition: 'center',
+            marginTop: '80px'
           }}
         ></div>
       </div>
@@ -42,19 +43,21 @@ const AboutUs = () => {
         {/* Our Team Card */}
         <div className="lg:mr-40 mt-20 lg:-mt-10 flex flex-col items-center lg:items-end">
           <div className="bg-zinc-900 p-10 m-4 w-5/6 lg:w-3/4 justify-start text-left items-start shadow-2xl shadow-purple-700 my-0 relative right-0 z-10 lg:pt-20 hover:scale-105 transform transition duration-500 ease-in-out hover:z-30">
-            <h3 className="text-4xl font-semibold mt-4">Our Team</h3>
+            <h3 className="text-5xl font-semibold mt-4 text-center w-full">Our Team</h3>
             <div className='flex flex-col md:flex-row justify-center items-center text-left mt-4 mb-10'>
-              <div className='flex flex-col justify-start items-start bg-black rounded-md p-4 m-2 w-full lg:w-2/5 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30 lg:h-[500px]' >
-                <img src={james} alt="About Us" className="h-60 w-60 p-4 lg:h-96 lg:w-96 lg:p-4 rounded-full border-4 border-purple-700" />
-                <p className="text-gray-300 text-xl mt-4">James S (IIT-B)</p>
+              <div className='flex flex-col justify-start items-start bg-black rounded-md p-4 m-2 w-full lg:w-2/5 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30 lg:h-[350px]' >
+              {/* <div className='flex flex-col justify-start items-start bg-black rounded-md p-4 m-2 w-full lg:w-2/5 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30 lg:h-[500px]' > */}
+                <img src={james} alt="About Us" className="h-60 w-60 p-4  rounded-full border-4 border-purple-700" />
+                {/* <img src={james} alt="About Us" className="h-60 w-60 p-4 lg:h-96 lg:w-96 lg:p-4 rounded-full border-4 border-purple-700" /> */}
+                <p className="text-gray-300 text-xl mt-4 text-center w-full">James S (IIT-B)</p>
               </div>
-              <div className='flex flex-col justify-start items-start bg-black rounded-md p-4 m-2 w-full lg:w-2/5 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30 lg:h-[500px]'>
-                <img src={suman} alt="About Us" className="h-60 w-60 p-4 lg:h-96 lg:w-96 lg:p-4 rounded-full border-4 border-purple-700" />
-                <p className="text-gray-300 text-xl mt-4">Suman H (KLE)</p>
+              <div className='flex flex-col justify-start items-start bg-black rounded-md p-4 m-2 w-full lg:w-2/5 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30 lg:h-[350px]'>
+                <img src={suman} alt="About Us" className="h-60 w-60 p-4  rounded-full border-4 border-purple-700" />
+                <p className="text-gray-300 text-xl mt-4 text-center w-full">Suman H (KLE)</p>
               </div>
-              <div className='flex flex-col justify-start items-start bg-black rounded-md p-4 m-2 w-full lg:w-2/5 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30 lg:h-[500px]'>
-                <img src={naren} alt="About Us" className="h-60 w-60 p-4 lg:h-96 lg:w-96 lg:p-4 rounded-full border-4 border-purple-700" />
-                <p className="text-gray-300 text-xl mt-4">Dr. Naren Shikarkhane (Laser Scientist, 45 Yrs Ex)</p>
+              <div className='flex flex-col justify-start items-start bg-black rounded-md p-4 m-2 w-full lg:w-2/5 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30 lg:h-[350px]'>
+                <img src={naren} alt="About Us" className="h-60 w-60 p-4  rounded-full border-4 border-purple-700" />
+                <p className="text-gray-300 text-xl mt-4 text-center w-full">Dr. Naren Shikarkhane (Laser Scientist, 45 Yrs Ex)</p>
               </div>
             </div>
           </div>
