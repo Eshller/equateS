@@ -5,6 +5,7 @@ import tech3 from '../../assets/tech3.png';
 import tech4 from '../../assets/tech4.png';
 import tech5 from '../../assets/tech5.png';
 import tech6 from '../../assets/tech6.png';
+
 import { ParallaxProvider } from 'react-scroll-parallax';
 import satellite from '../../assets/satellite.png';
 
@@ -45,7 +46,14 @@ const Technology = () => {
                 }}>
                 <div className="h-screen"
                     style={{
-                        backgroundImage: `url(${tech1})`,
+//                         background-image:
+//             linear-gradient(45deg, 
+//               rgba(245,70,66, 0.75), 
+//               rgba(8,83,156, 0.75)), url(
+// 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png');
+                        backgroundImage: `linear-gradient(45deg, 
+                            rgba(245,70,66, 0.75), 
+                            rgba(8,83,156, 0.75)),url(${tech1})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
@@ -54,7 +62,7 @@ const Technology = () => {
                 </div>
                 <div className="h-screen"
                     style={{
-                        backgroundImage: `url(${tech2})`,
+                        backgroundImage: `linear-gradient(90deg, rgb(20 16 16 / 70%), rgb(0 0 0 / 75%)), url(${tech2})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
@@ -94,9 +102,10 @@ const Technology = () => {
                     `
                 ))}
             </style>
+            
                 <div
                     style={{
-                        backgroundImage: `url(${tech4})`,
+                        backgroundImage: `linear-gradient(to bottom, rgb(0 0 0 / 13%), rgb(90 185 255 / 88%)),url(${tech4})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
@@ -106,9 +115,21 @@ const Technology = () => {
                     <div className="h-screen">
                     </div>
                 </div>
+                {/* <div
+                    style={{
+                        backgroundImage: `url(${grade})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundBlendMode: 'multiply',
+                    }}>
+                    <div className="h-screen">
+                    </div>
+                    <div className="h-screen">
+                    </div>
+                </div> */}
                 <div
                     style={{
-                        backgroundImage: `url(${tech5})`,
+                        backgroundImage: `linear-gradient(to bottom, rgb(51 110 169 / 0%), rgb(56 110 172 / 77%)),url(${tech5})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
@@ -122,7 +143,7 @@ const Technology = () => {
                 </div>
                 <div
                     style={{
-                        backgroundImage: `url(${tech6})`,
+                        backgroundImage: `linear-gradient(to bottom, rgb(25 79 114 / 42%), rgb(224 224 224)),url(${tech6})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
