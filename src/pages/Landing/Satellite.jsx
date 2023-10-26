@@ -89,7 +89,7 @@ const Satellite = () => {
         className="md:h-screen rounded flex flex-col w-full h-full text-white items-center justify-center z-10"
       >
         <div
-          className="absolute top-[50vh] md:relative md:top-0 w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
+          className="absolute top-[45vh] md:relative md:top-0 w-[80vw] h-[80vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
           style={{
             transform: `rotate(${rotationDegree}deg)`,
             transformOrigin: 'center center',
@@ -99,7 +99,7 @@ const Satellite = () => {
           {satellites.map((site, index) => (
             <div
               key={index}
-              className="w-16 h-16 absolute z-10"
+              className="w-12 h-8 md:w-16 md:h-16 absolute z-10"
               style={{
                 top: site.position.y,
                 left: site.position.x,
@@ -117,11 +117,11 @@ const Satellite = () => {
       </div>
 
       <div className="h-0">
-        <div className="absolute top-[-96vh] md:top-[110vh]  bottom-[90vh] md:left-[30vw] md:w-[80vh] md:h-[80vh] w-[80vw] md:border rounded-full items-center justify-center flex z-0 ">
-          <div className="w-[40vw] md:w-[60vh] md:h-[60vh] md:border rounded-full items-center justify-center flex">
-            <div className="w-[45vh] h-[45vh] rounded-full items-center justify-center flex">
+        <div className="absolute top-[-66vh] md:top-[110vh]  bottom-[90vh] md:left-[30vw] md:w-[80vh] md:h-[80vh] w-[80vw] md:border rounded-full items-center justify-center flex z-0 ">
+          <div className="w-[50vw] md:w-[60vh] md:h-[60vh] md:border rounded-full items-center justify-center flex">
+            <div className="w-[50vh] h-[50vh] rounded-full items-center justify-center flex">
               <div
-                className="relative md:top-0 w-full h-full"
+                className="relative md:top-0 w-1/2 h-1/2 md:w-full md:h-full"
                 style={{
                   backgroundImage: `url(${PurplePlanet})`,
               

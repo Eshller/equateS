@@ -8,6 +8,7 @@ import tech6 from '../../assets/tech6.png';
 import airplane1 from '../../assets/airplane1.png';
 import airplane2 from '../../assets/airplane2.png';
 import ballon from '../../assets/ballon.png';
+import techno from '../../assets/tech.png';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 import satellite from '../../assets/satellite.png';
@@ -107,7 +108,11 @@ const Technology = () => {
             <div className=''
                 style={{
                     // linear gradient from black to blue
-                    backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
+                    backgroundImage: `url(${techno})`,
+                    backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundBlendMode: 'multiply',
+                    // backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
                 }}>
                 <div className="h-screen"
                     style={{
@@ -116,12 +121,12 @@ const Technology = () => {
 //               rgba(245,70,66, 0.75), 
 //               rgba(8,83,156, 0.75)), url(
 // 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png');
-                        backgroundImage: `linear-gradient(45deg, 
-                            rgba(245,70,66, 0.75), 
-                            rgba(8,83,156, 0.75)),url(${tech1})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
+                        // backgroundImage: `linear-gradient(45deg, 
+                        //     rgba(245,70,66, 0.75), 
+                        //     rgba(8,83,156, 0.75)),url(${tech1})`,
+                        // backgroundSize: 'cover',
+                        // backgroundPosition: 'center',
+                        // backgroundBlendMode: 'multiply',
                         display:'flex',
                         alignItems:'center',
                         justifyContent: 'center',
@@ -140,20 +145,20 @@ const Technology = () => {
                         // background:`url(${tech2}) center/cover no-repeat`,
                         
                         // WebkitMask:'linear-gradient(to top, transparent 5%, black 100%)', 
-                        backgroundImage: `linear-gradient( rgb(0 0 0 / 75%),rgb(255 255 255 / 0%), rgb(0 0 0 / 75%)), url(${tech2})`,
+                        // backgroundImage: `linear-gradient( rgb(0 0 0 / 75%),rgb(255 255 255 / 0%), rgb(0 0 0 / 75%)), url(${tech2})`,
                         // backgroundImage: `linear-gradient(90deg, rgb(20 16 16 / 70%), rgb(0 0 0 / 75%)), url(${tech2})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
+                        // backgroundSize: 'cover',
+                        // backgroundPosition: 'center',
+                        // backgroundBlendMode: 'multiply',
                     }}
                 >
                 </div>
                 <div className="h-screen"
                     style={{
-                        backgroundImage: `url(${tech3})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
+                        // backgroundImage: `url(${tech3})`,
+                        // backgroundSize: 'cover',
+                        // backgroundPosition: 'center',
+                        // backgroundBlendMode: 'multiply',
                     }}
                 >
             <div
@@ -209,10 +214,10 @@ const Technology = () => {
             
                 <div
                     style={{
-                        backgroundImage: `linear-gradient(to bottom, rgb(0 0 0 / 13%), rgb(90 185 255 / 88%)),url(${tech4})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
+                        // backgroundImage: `linear-gradient(to bottom, rgb(0 0 0 / 13%), rgb(90 185 255 / 88%)),url(${tech4})`,
+                        // backgroundSize: 'cover',
+                        // backgroundPosition: 'center',
+                        // backgroundBlendMode: 'multiply',
                     }}>
                       
                     <div className="h-screen">
@@ -234,10 +239,10 @@ const Technology = () => {
                 </div> */}
                 <div
                     style={{
-                        backgroundImage: `linear-gradient(rgb(255 255 255), rgb(0 70 122 / 88%), rgba(56, 110, 172, 0.77)),url(${tech5})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
+                        // backgroundImage: `linear-gradient(rgb(255 255 255), rgb(0 70 122 / 88%), rgba(56, 110, 172, 0.77)),url(${tech5})`,
+                        // backgroundSize: 'cover',
+                        // backgroundPosition: 'center',
+                        // backgroundBlendMode: 'multiply',
                     }}>
                           <img src={ballon} className='w-[260px] relative top-[20vh] left-[60vw]' alt="" />
                     <div className="h-screen">
@@ -249,10 +254,10 @@ const Technology = () => {
                 </div>
                 <div
                     style={{
-                        backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${tech6})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
+                        // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${tech6})`,
+                        // backgroundSize: 'cover',
+                        // backgroundPosition: 'center',
+                        // backgroundBlendMode: 'multiply',
                     }}>
                         <img src={airplane1} className='w-[260px] relative top-[20vh] left-[60vw]' alt="" />
                         <img src={airplane2} className='w-[260px] relative top-[40vh] left-[10vw]' alt="" />
