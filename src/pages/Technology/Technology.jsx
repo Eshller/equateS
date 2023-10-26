@@ -244,7 +244,9 @@ const Technology = () => {
                         // backgroundPosition: 'center',
                         // backgroundBlendMode: 'multiply',
                     }}>
-                          <img src={ballon} className='w-[260px] relative top-[20vh] left-[60vw]' alt="" />
+                         <img src={satellite} className='w-[200px] relative top-[10vh] left-[10vw]' alt="" />
+                         <img src={satellite} className='w-[150px] rotate-45 relative top-[50vh] left-[60vw]' alt="" />
+                         <img src={satellite} className='w-[150px] rotate-90 relative top-[-40vh] left-[70vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
@@ -259,8 +261,11 @@ const Technology = () => {
                         // backgroundPosition: 'center',
                         // backgroundBlendMode: 'multiply',
                     }}>
-                        <img src={airplane1} className='w-[260px] relative top-[20vh] left-[60vw]' alt="" />
-                        <img src={airplane2} className='w-[260px] relative top-[40vh] left-[10vw]' alt="" />
+                        <img src={ballon} className='w-[200px] relative top-[-30vh] left-[30vw]' alt="" />
+                        <img src={ballon} className='w-[80px] relative top-[-10vh] left-[80vw]' alt="" />
+                        <img src={ballon} className='w-[140px] relative top-[30vh] left-[10vw]' alt="" />
+                        <img src={airplane1} className='w-[260px] relative top-[60vh] left-[60vw]' alt="" />
+                        <img src={airplane2} className='w-[260px] relative top-[100vh] left-[10vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
