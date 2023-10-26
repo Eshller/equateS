@@ -29,7 +29,7 @@ function App() {
         <Header activeTab={activeTab} toggle={toggle} />
         <main className="absolute top-0 left-0 right-0 bg-black">
           <Routes>
-            <Route path="/" element={<div style={{ backgroundImage: `url(${home_bg2})`,}}><Home /><Satellite /><TechProd /><Footer /></div>} />
+            <Route path="/" element={<div style={{ backgroundImage: ` url(${home_bg2})`,}}><Home /><Satellite /><TechProd /><Footer /></div>} />
             {/* <Route path="/technology" element={<div><Technology /><EarthSat /><SatelliteConstellation /><Aeroplane /><GroundSatellite /><Footer /></div>} /> */}
             <Route path="/technology" element={<div><Technology /><Footer /></div>} />
             <Route path="/products" element={<div><Products /><Footer /></div>} />

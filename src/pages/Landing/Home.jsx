@@ -44,12 +44,12 @@ const Home = () => {
         <div style={vectorImage2} className="hidden md:block"></div>
       </div>
 
-      <h1 className="text-4xl xl:text-6xl font-bold mb-4 pt-40 md:p-20 z-10">
+      <h1 className="uppercase text-4xl xl:text-6xl font-bold z-10">
         Multi-Orbital Optical Communication Payloads in Space
       </h1>
       <div className="z-10 w-full text-right">
       <button
-        className=" w-[100px] height-[100px] bg-blue-700 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-4xl lg:text-8xl font-bold rounded z-10 opacity-40"
+        className="relative top-[40vh] w-[70px] height-[80px] bg-blue-700 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-3xl lg:text-6xl font-bold rounded z-10 opacity-80"
         onClick={toggleCard}
       >
         <h2 className="relative top-[-10px]">+</h2>

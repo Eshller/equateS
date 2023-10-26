@@ -72,7 +72,11 @@ const Technology = () => {
                 </div>
                 <div className="h-screen"
                     style={{
-                        backgroundImage: `linear-gradient(90deg, rgb(20 16 16 / 70%), rgb(0 0 0 / 75%)), url(${tech2})`,
+                        // background:`url(${tech2}) center/cover no-repeat`,
+                        
+                        // WebkitMask:'linear-gradient(to top, transparent 5%, black 100%)', 
+                        backgroundImage: `linear-gradient( rgb(0 0 0 / 75%),rgb(255 255 255 / 0%), rgb(0 0 0 / 75%)), url(${tech2})`,
+                        // backgroundImage: `linear-gradient(90deg, rgb(20 16 16 / 70%), rgb(0 0 0 / 75%)), url(${tech2})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
