@@ -89,7 +89,7 @@ const Satellite = () => {
         className="md:h-screen rounded flex flex-col w-full h-full text-white items-center justify-center z-10"
       >
         <div
-          className="w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
+          className="absolute top-[50vh] md:relative md:top-0 w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
           style={{
             transform: `rotate(${rotationDegree}deg)`,
             transformOrigin: 'center center',
@@ -117,14 +117,14 @@ const Satellite = () => {
       </div>
 
       <div className="h-0">
-        <div className="relative bottom-[90vh] left-[30vw] w-[80vh] h-[80vh] border rounded-full items-center justify-center flex z-0 ">
-          <div className="w-[40vw] md:w-[60vh] md:h-[60vh] border rounded-full items-center justify-center flex">
-            <div className="w-[40vh] h-[40vh] border rounded-full items-center justify-center flex">
+        <div className="absolute top-[-96vh] md:top-[110vh]  bottom-[90vh] md:left-[30vw] md:w-[80vh] md:h-[80vh] w-[80vw] md:border rounded-full items-center justify-center flex z-0 ">
+          <div className="w-[40vw] md:w-[60vh] md:h-[60vh] md:border rounded-full items-center justify-center flex">
+            <div className="w-[45vh] h-[45vh] rounded-full items-center justify-center flex">
               <div
-                className="relative w-full h-full"
+                className="relative md:top-0 w-full h-full"
                 style={{
                   backgroundImage: `url(${PurplePlanet})`,
-
+              
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
