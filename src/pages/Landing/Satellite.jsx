@@ -79,9 +79,9 @@ const Satellite = () => {
       style={{
         // backgroundImage: `url(${home_bg2})`,
         // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${home_bg2})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        transition: 'background-color 1s', // Background color transition,
+        // backgroundSize: 'cover',
+        // backgroundPosition: 'center',
+        // transition: 'background-color 1s', // Background color transition,
       }}
     >
       {/* Planet */}
@@ -118,7 +118,7 @@ const Satellite = () => {
 
       <div className="h-0">
         <div className="relative bottom-[90vh] left-[30vw] w-[80vh] h-[80vh] border rounded-full items-center justify-center flex z-0 ">
-          <div className="w-[60vh] h-[60vh] border rounded-full items-center justify-center flex">
+          <div className="w-[40vw] md:w-[60vh] md:h-[60vh] border rounded-full items-center justify-center flex">
             <div className="w-[40vh] h-[40vh] border rounded-full items-center justify-center flex">
               <div
                 className="relative w-full h-full"

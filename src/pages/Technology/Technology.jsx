@@ -5,6 +5,9 @@ import tech3 from '../../assets/tech3.png';
 import tech4 from '../../assets/tech4.png';
 import tech5 from '../../assets/tech5.png';
 import tech6 from '../../assets/tech6.png';
+import airplane1 from '../../assets/airplane1.png';
+import airplane2 from '../../assets/airplane2.png';
+import ballon from '../../assets/ballon.png';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 import satellite from '../../assets/satellite.png';
@@ -14,28 +17,90 @@ const getRandomValue = (min, max) => {
 };
 
 const Technology = () => {
-    const satellites = [...Array(6)].map((_, index) => {
-        const angle = (index / 6) * 2 * Math.PI; // Equally spaced angles
-        const endpointX = 40 * Math.cos(angle); // Calculate x-coordinate
-        const endpointY = 47 * Math.sin(angle); // Calculate y-coordinate
-        const animationDuration = getRandomValue(8, 12); // Random duration between 8s and 12s
+    // const satellites = [...Array(6)].map((_, index) => {
+    //     const angle = (index / 6) * 2 * Math.PI; // Equally spaced angles
+    //     const endpointX = 40 * Math.cos(angle); // Calculate x-coordinate
+    //     const endpointY = 47 * Math.sin(angle); // Calculate y-coordinate
+    //     const animationDuration = getRandomValue(8, 12); // Random duration between 8s and 12s
 
-        return (
-            <div
-                key={index}
-                className="w-16 h-16 absolute"
-                style={{
-                    backgroundImage: `url(${satellite})`,
-                    backgroundSize: 'cover',
-                    animation: `bounce ${animationDuration} linear infinite, satellitePath${index} ${animationDuration} linear infinite`,
-                    transform: `translate(${endpointX}vw, ${endpointY}vh)`,
-                    zIndex: 10 + index, // Ensure proper layering
-                }}
-            ></div>
-        );
-    });
+    //     return (
+    //         <div
+    //             key={index}
+    //             className="w-16 h-16 absolute"
+    //             style={{
+    //                 backgroundImage: `url(${satellite})`,
+    //                 backgroundSize: 'cover',
+    //                 animation: `bounce ${animationDuration} linear infinite, satellitePath${index} ${animationDuration} linear infinite`,
+    //                 transform: `translate(${endpointX}vw, ${endpointY}vh)`,
+    //                 zIndex: 10 + index, // Ensure proper layering
+    //             }}
+    //         ></div>
+    //     );
+    // });
 
+    const [rotationDegree, setRotationDegree] = useState(0);
 
+    useEffect(() => {
+      const rotationInterval = setInterval(() => {
+        // Rotate the satellites by 1 degree every 100 milliseconds
+        setRotationDegree((prevRotation) => (prevRotation + 1) % 360);
+      }, 100);
+  
+      return () => {
+        clearInterval(rotationInterval);
+      };
+    }, []);
+  
+    const satellites = [
+      {
+        name: 'Satellite 1',
+        info: 'Information for Satellite 1.',
+        position: {
+          x: '42%',
+          y: '28%',
+        },
+      },
+      {
+        name: 'Satellite 2',
+        info: 'Information for Satellite 2.',
+        position: {
+          x: '80%',
+          y: '50%',
+        },
+      },
+      {
+        name: 'Satellite 3',
+        info: 'Information for Satellite 3.',
+        position: {
+          x: '50%',
+          y: '80%',
+        },
+      },
+      {
+        name: 'Satellite 4',
+        info: 'Information for Satellite 4.',
+        position: {
+          x: '20%',
+          y: '37%',
+        },
+      },
+      {
+        name: 'Satellite 5',
+        info: 'Information for Satellite 5.',
+        position: {
+          x: '10%',
+          y: '60%',
+        },
+      },
+      {
+        name: 'Satellite 6',
+        info: 'Information for Satellite 6.',
+        position: {
+          x: '90%',
+          y: '20%',
+        },
+      }
+    ];
 
     return (
         <ParallaxProvider>
@@ -91,9 +156,34 @@ const Technology = () => {
                         backgroundBlendMode: 'multiply',
                     }}
                 >
-                    {satellites}
+            <div
+          className="w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
+          style={{
+            transform: `rotate(${rotationDegree}deg)`,
+            transformOrigin: 'center center',
+            transition: 'transform 0.05s ease-in-out', // Smooth transition
+          }}
+        >
+          {satellites.map((site, index) => (
+            <div
+              key={index}
+              className="w-16 h-16 absolute z-10"
+              style={{
+                top: site.position.y,
+                left: site.position.x,
+                cursor: 'pointer',
+                transform: `rotate(${-rotationDegree}deg)`,
+                transformOrigin: 'center center',
+                transition: 'transform 0.05s ease-in-out', // Smooth transition
+              }}
+            >
+              <img src={satellite} alt="satellite" className="w-16 h-16" />
+            </div>
+          ))}
+        </div>
+                    {/* {satellites} */}
                 </div>
-                <style>
+                {/* <style>
                 {[...Array(6)].map((_, index) => (
                     `
                     @keyframes satellitePath${index} {
@@ -115,7 +205,7 @@ const Technology = () => {
                     }
                     `
                 ))}
-            </style>
+            </style> */}
             
                 <div
                     style={{
@@ -124,6 +214,7 @@ const Technology = () => {
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
                     }}>
+                      
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
@@ -148,6 +239,7 @@ const Technology = () => {
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
                     }}>
+                          <img src={ballon} className='w-[260px] relative top-[20vh] left-[60vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
@@ -162,6 +254,8 @@ const Technology = () => {
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
                     }}>
+                        <img src={airplane1} className='w-[260px] relative top-[20vh] left-[60vw]' alt="" />
+                        <img src={airplane2} className='w-[260px] relative top-[40vh] left-[10vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">

@@ -34,11 +34,11 @@ const Home = () => {
     <div className="text-white text-center items-center h-screen flex flex-col p-10 md:p-40 w-full">
       <div
         className="block absolute top-0 w-full h-screen z-0"
-        style={{
-          backgroundImage: `url(${home_bg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        // style={{
+        //   backgroundImage: `url(${home_bg})`,
+        //   backgroundSize: 'cover',
+        //   backgroundPosition: 'center',
+        // }}
       >
         <div style={vectorImage1} className="hidden md:block"></div>
         <div style={vectorImage2} className="hidden md:block"></div>
@@ -61,9 +61,9 @@ const Home = () => {
         <div>
           <div className='hidden md:block'>
             <div className="flex fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-75 z-30 p-2">
-              <div className="flex p-8 rounded-lg bg-gray-900">
+              <div className="flex p-8 rounded-lg bg-gray-900 h-[60vw]">
                 <div className="flex flex-col justify-center items-center h-full p-20 m-0">
-                  <p className="text-4xl mt-4 mb-4">Multilayer constellations involve deploying multiple layers or tiers of satellites in various orbits to provide global coverage and improved connectivity. These layers include Low Earth Orbit (LEO), Medium Earth Orbit (MEO), and Geostationary Orbit (GEO) satellites. Each layer serves a specific purpose, with LEO satellites providing low latency and high-speed communication, MEO satellites covering broader regions, and GEO satellites offering wide-area coverage. The objective of the multilayer based satellite network operation scheme is to minimize the latency of transmitting telecommand (TC) messages while maintaining high levels of resilience and reliability. The combined use of LEO, MEO, and GEO constellations enhances resilience, taking advantage of GEO satellites’ fixed positions above the equator.</p>
+                  <p className="text-3xl mt-4 mb-4">Multilayer constellations involve deploying multiple layers or tiers of satellites in various orbits to provide global coverage and improved connectivity. These layers include Low Earth Orbit (LEO), Medium Earth Orbit (MEO), and Geostationary Orbit (GEO) satellites. Each layer serves a specific purpose, with LEO satellites providing low latency and high-speed communication, MEO satellites covering broader regions, and GEO satellites offering wide-area coverage. The objective of the multilayer based satellite network operation scheme is to minimize the latency of transmitting telecommand (TC) messages while maintaining high levels of resilience and reliability. The combined use of LEO, MEO, and GEO constellations enhances resilience, taking advantage of GEO satellites’ fixed positions above the equator.</p>
                   <button className="bg-purple-500 text-black px-4 py-2 relative bottom-[10px] m-20"
                     onClick={toggleCard}>
                     Close
