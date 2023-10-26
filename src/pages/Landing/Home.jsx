@@ -49,10 +49,10 @@ const Home = () => {
       </h1>
       <div className="z-10 w-full text-right">
       <button
-        className="bg-blue-700 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-4xl lg:text-8xl py-0 font-bold px-8 rounded z-10 opacity-40"
+        className=" w-[100px] height-[100px] bg-blue-700 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-4xl lg:text-8xl font-bold rounded z-10 opacity-40"
         onClick={toggleCard}
       >
-        +
+        <h2 className="relative top-[-10px]">+</h2>
       </button>
       </div>
     
