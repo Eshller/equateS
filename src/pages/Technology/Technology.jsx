@@ -57,8 +57,21 @@ const Technology = () => {
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
+                        display:'flex',
+                        alignItems:'center',
+                        justifyContent: 'center',
                     }}
                 >
+                    <div className="text-5xl xl:text-6xl mb-4 py-4" style={{
+                          color: 'white',
+
+                          fontSize: '8rem',
+                          textAlign: 'center',
+                        //   mixBlendMode: 'multiply',
+                          textShadow: 'black -5px 5px 0px, white 0px 5px 0px, #001180 8px 5px 0px',
+                        //   textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
+                        
+                    }}>Technology</div>
                 </div>
                 <div className="h-screen"
                     style={{
@@ -129,7 +142,7 @@ const Technology = () => {
                 </div> */}
                 <div
                     style={{
-                        backgroundImage: `linear-gradient(to bottom, rgb(51 110 169 / 0%), rgb(56 110 172 / 77%)),url(${tech5})`,
+                        backgroundImage: `linear-gradient(rgb(255 255 255), rgb(0 70 122 / 88%), rgba(56, 110, 172, 0.77)),url(${tech5})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
@@ -143,7 +156,7 @@ const Technology = () => {
                 </div>
                 <div
                     style={{
-                        backgroundImage: `linear-gradient(to bottom, rgb(25 79 114 / 42%), rgb(224 224 224)),url(${tech6})`,
+                        backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${tech6})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
