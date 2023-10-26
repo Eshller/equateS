@@ -13,7 +13,7 @@ const AboutUs = () => {
           className="w-full h-full"
           style={{
             backgroundImage: `url(${logo})`,
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundPosition: 'center',
             marginTop: '80px'
           }}

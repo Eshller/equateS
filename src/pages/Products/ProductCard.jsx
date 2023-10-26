@@ -34,7 +34,7 @@ const ProductCard = ({ title, image, details, position }) => {
               <img
                 src={image}
                 alt={title}
-                className="relative bottom-[100px] left-[450px]  w-[70vh] h-[70vh] hover:scale-110 transform transition duration-500 ease-in-out"
+                className="relative bottom-[100px] left-[600px] xl:left-[500px] w-[80vw] xl:w-[70vh]  hover:scale-110 transform transition duration-500 ease-in-out"
               />
             </div>
           </div>
