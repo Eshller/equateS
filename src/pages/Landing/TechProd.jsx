@@ -91,7 +91,8 @@ const TechProd = () => {
     return (
         <div
             style={{
-                backgroundImage: `url(${home_bg2})`,
+                // backgroundImage: `url(${home_bg2})`,
+                // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${home_bg2})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 transition: 'background-color 0.3s', // Background color transition

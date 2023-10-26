@@ -77,7 +77,8 @@ const Satellite = () => {
     <div
       className="p-4 w-full -z-30"
       style={{
-        backgroundImage: `url(${home_bg2})`,
+        // backgroundImage: `url(${home_bg2})`,
+        // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${home_bg2})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         transition: 'background-color 1s', // Background color transition,
@@ -123,6 +124,7 @@ const Satellite = () => {
                 className="relative w-full h-full"
                 style={{
                   backgroundImage: `url(${PurplePlanet})`,
+
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
