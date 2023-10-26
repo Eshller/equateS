@@ -47,12 +47,15 @@ const Home = () => {
       <h1 className="text-4xl md:text-6xl font-bold mb-4 pt-40 md:p-20 z-10">
         Multi-Orbital Optical Communication Payloads in Space
       </h1>
+      <div className="z-10 w-full text-right">
       <button
-        className="bg-blue-700/80 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-5xl lg:text-9xl py-3 font-bold px-8 rounded z-10"
+        className="bg-blue-700/80 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-4xl lg:text-8xl py-0 font-bold px-8 rounded z-10"
         onClick={toggleCard}
       >
         +
       </button>
+      </div>
+    
 
       {isCardVisible && (
         <div>

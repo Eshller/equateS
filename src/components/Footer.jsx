@@ -14,7 +14,7 @@ const Footer = () => {
                     <p>Pune, MH</p>
                     <p>411038</p>
                 </div>
-                <div>Developed and Maintained by <a href="https://eshway.com/"> Eshway</a> </div>
+                <div>Developed and Maintained by <a href="https://eshway.com/" className='text-[#d86dfc]'> Eshway</a> </div>
                 <div className="mb-4 p-2">
                     <h4 className="text-xl font-bold">Contact Us</h4>
                     <p>

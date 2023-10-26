@@ -34,7 +34,8 @@ const ProductCard = ({ title, image, details, position }) => {
               <img
                 src={image}
                 alt={title}
-                className="relative bottom-[100px] left-[600px] xl:left-[500px] w-[80vw] xl:w-[70vh]  hover:scale-110 transform transition duration-500 ease-in-out"
+                className="relative bottom-[100px] left-[600px] xl:left-[500px] w-[80vw] xl:w-[70vh]  hover:scale-110 transform transition duration-500 ease-in-out rotate-[-20deg]"
+                
               />
             </div>
           </div>
@@ -48,7 +49,7 @@ const ProductCard = ({ title, image, details, position }) => {
                 <img
                   src={image}
                   alt={title}
-                  className="relative top-[100px] left-[50px] xl:left-[100px]  w-[60vh] h-[60vh] hover:scale-110 transform transition duration-500 ease-in-out"
+                  className="relative top-[90px] left-[50px] xl:left-[100px]  w-[65vh] h-[65vh] hover:scale-110 transform transition duration-500 ease-in-out shadow-inner  drop-shadow-2xl"
                 />
               </div>
               <div className="relative text-left top-[170px] left-[200px] xl:left-[300px] 2xl:left-[300px] w-1/2">
