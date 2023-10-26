@@ -44,7 +44,7 @@ const Home = () => {
         <div style={vectorImage2} className="hidden md:block"></div>
       </div>
 
-      <h1 className="text-4xl md:text-6xl font-bold mb-4 pt-40 md:p-20 z-10">
+      <h1 className="text-4xl xl:text-6xl font-bold mb-4 pt-40 md:p-20 z-10">
         Multi-Orbital Optical Communication Payloads in Space
       </h1>
       <div className="z-10 w-full text-right">

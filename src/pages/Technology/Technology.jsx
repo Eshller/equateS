@@ -64,10 +64,7 @@ const Technology = () => {
                 >
                     <div className="text-5xl xl:text-6xl mb-4 py-4" style={{
                           color: 'white',
-
-                          fontSize: '8rem',
                           textAlign: 'center',
-                        //   mixBlendMode: 'multiply',
                           textShadow: 'black -5px 5px 0px, white 0px 5px 0px, #001180 8px 5px 0px',
                         //   textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
                         
