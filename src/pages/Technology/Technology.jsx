@@ -198,7 +198,7 @@ const Technology = () => {
                 style={{
                     // linear gradient from black to blue
                     backgroundImage: `url(${techno})`,
-                    backgroundSize: 'cover',
+                    backgroundSize: '100% 100%',
                         backgroundPosition: 'center',
                         backgroundBlendMode: 'multiply',
                     // backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
@@ -221,7 +221,7 @@ const Technology = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <div className="text-5xl xl:text-6xl mb-4 py-4" style={{
+                    <div className="text-5xl md:text-7xl xl:text-9xl mb-4 py-4" style={{
                           color: 'white',
                           textAlign: 'center',
                           textShadow: 'black -5px 5px 0px, white 0px 5px 0px, #001180 8px 5px 0px',
@@ -251,7 +251,7 @@ const Technology = () => {
                     }}
                 >
             <div
-          className="relative top-[170vh] left-[30px] md:left-[25vw] w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
+          className="relative top-[170vh] left-[30px] md:top-[160vh] md:left-[25vw] w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
           style={{
             // top:'160vh',
             // left:'25vw',
@@ -352,11 +352,11 @@ const Technology = () => {
                         // backgroundPosition: 'center',
                         // backgroundBlendMode: 'multiply',
                     }}>
-                        <img src={ballon} className='w-[200px] relative top-[-30vh] left-[30vw]' alt="" />
-                        <img src={ballon} className='w-[80px] relative top-[-10vh] left-[80vw]' alt="" />
-                        <img src={ballon} className='w-[140px] relative top-[30vh] left-[10vw]' alt="" />
-                        <img src={airplane1} className='w-[260px] relative top-[60vh] left-[60vw]' alt="" />
-                        <img src={airplane2} className='w-[260px] relative top-[100vh] left-[10vw]' alt="" />
+                        <img src={ballon} className='w-[20vw] relative top-[-30vh] left-[30vw]' alt="" />
+                        <img src={ballon} className='w-[10vw] relative top-[-10vh] left-[80vw]' alt="" />
+                        <img src={ballon} className='w-[15vw] relative top-[30vh] left-[10vw]' alt="" />
+                        <img src={airplane1} className='w-[20vw] relative top-[60vh] left-[60vw]' alt="" />
+                        <img src={airplane2} className='w-[20vw] relative top-[100vh] left-[10vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
