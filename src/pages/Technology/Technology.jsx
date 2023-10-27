@@ -354,9 +354,9 @@ const Technology = () => {
                         // backgroundPosition: 'center',
                         // backgroundBlendMode: 'multiply',
                     }}>
-                         <img src={satellite} className='w-[20vw] relative top-[10vh] left-[10vw]' alt="" />
-                         <img src={satellite} className='w-[20vw] rotate-45 relative top-[50vh] left-[60vw]' alt="" />
-                         <img src={satellite} className='w-[20vw] rotate-90 relative top-[-40vh] left-[70vw]' alt="" />
+                         <img src={satellite} className='w-[20vw] md:w-[100px] relative top-[10vh] left-[10vw]' alt="" />
+                         <img src={satellite} className='w-[20vw] md:w-[100px] rotate-45 relative top-[50vh] left-[60vw]' alt="" />
+                         <img src={satellite} className='w-[20vw] md:w-[100px] rotate-90 relative top-[-40vh] left-[70vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
