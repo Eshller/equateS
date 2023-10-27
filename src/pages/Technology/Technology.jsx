@@ -58,96 +58,136 @@ const Technology = () => {
         name: 'Satellite 1',
         info: 'Information for Satellite 1.',
         position: {
-          x: '10%',
-          y: '58%',
+          x: '10vw',
+          y: '10vh',
         },
       },
       {
         name: 'Satellite 2',
         info: 'Information for Satellite 2.',
         position: {
-          x: '20%',
-          y: '80%',
+          x: '0vw',
+          y: '10vh',
         },
       },
       {
         name: 'Satellite 3',
         info: 'Information for Satellite 3.',
         position: {
-          x: '40%',
-          y: '90%',
+          x: '20vw',
+          y: '0vh',
         },
       },
       {
         name: 'Satellite 4',
         info: 'Information for Satellite 4.',
         position: {
-          x: '77%',
-          y: '37%',
+          x: '30vw',
+          y: '0vh',
         },
       },
       {
         name: 'Satellite 5',
         info: 'Information for Satellite 5.',
         position: {
-          x: '90%',
-          y: '60%',
+          x: '40vw',
+          y:'5vh',
         },
       },
       {
         name: 'Satellite 6',
         info: 'Information for Satellite 6.',
         position: {
-          x: '90%',
-          y: '80%',
+          x: '50vw',
+          y: '10vh',
         },
       },
       {
         name: 'Satellite 6',
         info: 'Information for Satellite 6.',
         position: {
-          x: '50%',
-          y: '17%',
+          x: '50vw',
+          y: '30vh',
         },
       },
       {
         name: 'Satellite 7',
         info: 'Information for Satellite 7.',
         position: {
-          x: '26%',
-          y: '90%',
+          x: '40vw',
+          y: '90vh',
         },
       },
       {
         name: 'Satellite 8',
         info: 'Information for Satellite 8.',
         position: {
-          x: '90%',
-          y: '67%',
+          x: '30vw',
+          y: '90vh',
         },
       },
       {
         name: 'Satellite 9',
         info: 'Information for Satellite 9.',
         position: {
-          x: '51%',
-          y: '69%',
+          x: '50vw',
+          y: '90vh',
         },
       },
       {
         name: 'Satellite 10',
         info: 'Information for Satellite 10.',
         position: {
-          x: '71%',
-          y: '89%',
+          x: '50vw',
+          y: '50vh',
         },
       },
       {
         name: 'Satellite 11',
         info: 'Information for Satellite 11.',
         position: {
-          x: '69%',
-          y: '29%',
+          x: '0vw',
+          y: '50vh',
+        },
+      },
+      {
+        name: 'Satellite 12',
+        info: 'Information for Satellite 12.',
+        position: {
+          x: '0vw',
+          y: '40vh',
+        },
+      },
+      {
+        name: 'Satellite 12',
+        info: 'Information for Satellite 12.',
+        position: {
+          x: '0vw',
+          y: '80vh',
+        },
+      },
+      {
+        name: 'Satellite 12',
+        info: 'Information for Satellite 12.',
+        position: {
+          x: '5vw',
+          y: '80vh',
+        },
+      },
+      {
+        name: 'Satellite 12',
+        info: 'Information for Satellite 12.',
+        position: {
+          x: '10vw',
+          y: '90vh',
+        },
+      },
+      {
+        name: 'Satellite 12',
+        info: 'Information for Satellite 12.',
+        position: {
+          x: '20vw',
+          y: '90vh',
         },
       },
     ];
