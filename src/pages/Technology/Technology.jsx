@@ -9,6 +9,7 @@ import airplane1 from '../../assets/airplane1.png';
 import airplane2 from '../../assets/airplane2.png';
 import ballon from '../../assets/ballon.png';
 import techno from '../../assets/tech.png';
+import earth from '../../assets/earth.png';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 import satellite from '../../assets/satellite.png';
@@ -57,31 +58,31 @@ const Technology = () => {
         name: 'Satellite 1',
         info: 'Information for Satellite 1.',
         position: {
-          x: '42%',
-          y: '28%',
+          x: '10%',
+          y: '58%',
         },
       },
       {
         name: 'Satellite 2',
         info: 'Information for Satellite 2.',
         position: {
-          x: '80%',
-          y: '50%',
+          x: '20%',
+          y: '80%',
         },
       },
       {
         name: 'Satellite 3',
         info: 'Information for Satellite 3.',
         position: {
-          x: '50%',
-          y: '80%',
+          x: '40%',
+          y: '90%',
         },
       },
       {
         name: 'Satellite 4',
         info: 'Information for Satellite 4.',
         position: {
-          x: '20%',
+          x: '77%',
           y: '37%',
         },
       },
@@ -89,7 +90,7 @@ const Technology = () => {
         name: 'Satellite 5',
         info: 'Information for Satellite 5.',
         position: {
-          x: '10%',
+          x: '90%',
           y: '60%',
         },
       },
@@ -98,9 +99,57 @@ const Technology = () => {
         info: 'Information for Satellite 6.',
         position: {
           x: '90%',
-          y: '20%',
+          y: '80%',
         },
-      }
+      },
+      {
+        name: 'Satellite 6',
+        info: 'Information for Satellite 6.',
+        position: {
+          x: '50%',
+          y: '17%',
+        },
+      },
+      {
+        name: 'Satellite 7',
+        info: 'Information for Satellite 7.',
+        position: {
+          x: '26%',
+          y: '90%',
+        },
+      },
+      {
+        name: 'Satellite 8',
+        info: 'Information for Satellite 8.',
+        position: {
+          x: '90%',
+          y: '67%',
+        },
+      },
+      {
+        name: 'Satellite 9',
+        info: 'Information for Satellite 9.',
+        position: {
+          x: '51%',
+          y: '69%',
+        },
+      },
+      {
+        name: 'Satellite 10',
+        info: 'Information for Satellite 10.',
+        position: {
+          x: '71%',
+          y: '89%',
+        },
+      },
+      {
+        name: 'Satellite 11',
+        info: 'Information for Satellite 11.',
+        position: {
+          x: '69%',
+          y: '29%',
+        },
+      },
     ];
 
     return (
@@ -162,8 +211,10 @@ const Technology = () => {
                     }}
                 >
             <div
-          className="w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
+          className="relative  w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
           style={{
+            top:'160vh',
+            left:'25vw',
             transform: `rotate(${rotationDegree}deg)`,
             transformOrigin: 'center center',
             transition: 'transform 0.05s ease-in-out', // Smooth transition
@@ -172,7 +223,7 @@ const Technology = () => {
           {satellites.map((site, index) => (
             <div
               key={index}
-              className="w-16 h-16 absolute z-10"
+              className="w-16 h-16 absolute  z-10"
               style={{
                 top: site.position.y,
                 left: site.position.x,
@@ -219,7 +270,7 @@ const Technology = () => {
                         // backgroundPosition: 'center',
                         // backgroundBlendMode: 'multiply',
                     }}>
-                      
+                       <img src={earth} className='w-[30vw] relative top-[80vh] left-[35vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
