@@ -246,7 +246,7 @@ const Technology = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <div className={`overflow-y-hidden transition ease-in-out delay-150 text-white ${showAnimation ? 'scale-[20]' : 'text-5xl md:text-7xl xl:text-[10rem] opacity-100'}  ${showFade ? 'opacity-0' : 'opacity-100'}  mb-4 py-4`} style={{
+                    <div className={`overflow-y-hidden uppercase transition ease-in-out delay-150 text-white ${showAnimation ? 'scale-[20]' : 'text-5xl md:text-7xl xl:text-[10rem] opacity-100'}  ${showFade ? 'opacity-0' : 'opacity-100'}  mb-4 py-4`} style={{
                         //   color: 'white',
                           textAlign: 'center',
                           
