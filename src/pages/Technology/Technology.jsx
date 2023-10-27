@@ -58,138 +58,138 @@ const Technology = () => {
         name: 'Satellite 1',
         info: 'Information for Satellite 1.',
         position: {
-          x: '10vw',
-          y: '10vh',
+          x: '15%',
+          y: '15%',
         },
       },
       {
         name: 'Satellite 2',
         info: 'Information for Satellite 2.',
         position: {
-          x: '0vw',
-          y: '10vh',
+          x: '80%',
+          y: '80%',
         },
       },
       {
         name: 'Satellite 3',
         info: 'Information for Satellite 3.',
         position: {
-          x: '20vw',
-          y: '0vh',
+          x: '15%',
+          y: '80%',
         },
       },
       {
         name: 'Satellite 4',
         info: 'Information for Satellite 4.',
         position: {
-          x: '30vw',
-          y: '0vh',
+          x: '85%',
+          y: '15%',
         },
       },
       {
         name: 'Satellite 5',
         info: 'Information for Satellite 5.',
         position: {
-          x: '40vw',
-          y:'5vh',
+          x: '40%',
+          y:'10%',
         },
       },
       {
         name: 'Satellite 6',
         info: 'Information for Satellite 6.',
         position: {
-          x: '50vw',
-          y: '10vh',
+          x: '45%',
+          y: '80%',
         },
       },
       {
         name: 'Satellite 6',
         info: 'Information for Satellite 6.',
         position: {
-          x: '50vw',
-          y: '30vh',
+          x: '80%',
+          y: '45%',
         },
       },
       {
         name: 'Satellite 7',
         info: 'Information for Satellite 7.',
         position: {
-          x: '40vw',
-          y: '90vh',
+          x: '10%',
+          y: '40%',
         },
       },
       {
         name: 'Satellite 8',
         info: 'Information for Satellite 8.',
         position: {
-          x: '30vw',
-          y: '90vh',
+          x: '20%',
+          y: '30%',
         },
       },
       {
         name: 'Satellite 9',
         info: 'Information for Satellite 9.',
         position: {
-          x: '50vw',
-          y: '90vh',
+          x: '30%',
+          y: '20%',
         },
       },
       {
         name: 'Satellite 10',
         info: 'Information for Satellite 10.',
         position: {
-          x: '50vw',
-          y: '50vh',
+          x: '60%',
+          y: '20%',
         },
       },
       {
         name: 'Satellite 11',
         info: 'Information for Satellite 11.',
         position: {
-          x: '0vw',
-          y: '50vh',
+          x: '20%',
+          y: '60%',
         },
       },
       {
         name: 'Satellite 12',
         info: 'Information for Satellite 12.',
         position: {
-          x: '0vw',
-          y: '40vh',
+          x: '60%',
+          y: '75%',
+        },
+      },
+      {
+        name: 'Satellite 13',
+        info: 'Information for Satellite 12.',
+        position: {
+          x: '75%',
+          y: '60%',
         },
       },
       {
         name: 'Satellite 12',
         info: 'Information for Satellite 12.',
         position: {
-          x: '0vw',
-          y: '80vh',
+          x: '85%',
+          y: '75%',
         },
       },
-      {
-        name: 'Satellite 12',
-        info: 'Information for Satellite 12.',
-        position: {
-          x: '5vw',
-          y: '80vh',
-        },
-      },
-      {
-        name: 'Satellite 12',
-        info: 'Information for Satellite 12.',
-        position: {
-          x: '10vw',
-          y: '90vh',
-        },
-      },
-      {
-        name: 'Satellite 12',
-        info: 'Information for Satellite 12.',
-        position: {
-          x: '20vw',
-          y: '90vh',
-        },
-      },
+    //   {
+    //     name: 'Satellite 12',
+    //     info: 'Information for Satellite 12.',
+    //     position: {
+    //       x: '10%',
+    //       y: '90%',
+    //     },
+    //   },
+    //   {
+    //     name: 'Satellite 12',
+    //     info: 'Information for Satellite 12.',
+    //     position: {
+    //       x: '20%',
+    //       y: '90%',
+    //     },
+    //   },
     ];
 
     return (
@@ -251,10 +251,10 @@ const Technology = () => {
                     }}
                 >
             <div
-          className="relative  w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
+          className="relative top-[170vh] left-[30px] md:left-[25vw] w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
           style={{
-            top:'160vh',
-            left:'25vw',
+            // top:'160vh',
+            // left:'25vw',
             transform: `rotate(${rotationDegree}deg)`,
             transformOrigin: 'center center',
             transition: 'transform 0.05s ease-in-out', // Smooth transition
@@ -263,7 +263,7 @@ const Technology = () => {
           {satellites.map((site, index) => (
             <div
               key={index}
-              className="w-16 h-16 absolute  z-10"
+              className="w-8 h-8 absolute  z-10"
               style={{
                 top: site.position.y,
                 left: site.position.x,
@@ -273,7 +273,7 @@ const Technology = () => {
                 transition: 'transform 0.05s ease-in-out', // Smooth transition
               }}
             >
-              <img src={satellite} alt="satellite" className="w-16 h-16" />
+              <img src={satellite} alt="satellite" className="w-8 h-8 md:w-16 md:h-16" />
             </div>
           ))}
         </div>
@@ -335,9 +335,9 @@ const Technology = () => {
                         // backgroundPosition: 'center',
                         // backgroundBlendMode: 'multiply',
                     }}>
-                         <img src={satellite} className='w-[200px] relative top-[10vh] left-[10vw]' alt="" />
-                         <img src={satellite} className='w-[150px] rotate-45 relative top-[50vh] left-[60vw]' alt="" />
-                         <img src={satellite} className='w-[150px] rotate-90 relative top-[-40vh] left-[70vw]' alt="" />
+                         <img src={satellite} className='w-[20vw] relative top-[10vh] left-[10vw]' alt="" />
+                         <img src={satellite} className='w-[20vw] rotate-45 relative top-[50vh] left-[60vw]' alt="" />
+                         <img src={satellite} className='w-[20vw] rotate-90 relative top-[-40vh] left-[70vw]' alt="" />
                     <div className="h-screen">
                     </div>
                     <div className="h-screen">
