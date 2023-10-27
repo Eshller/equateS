@@ -19,6 +19,24 @@ const getRandomValue = (min, max) => {
 };
 
 const Technology = () => {
+    const [showAnimation, setShowAnimation] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight/10) {
+        console.log("window")
+        setShowAnimation(true);
+      } else {
+        setShowAnimation(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
     // const satellites = [...Array(6)].map((_, index) => {
     //     const angle = (index / 6) * 2 * Math.PI; // Equally spaced angles
     //     const endpointX = 40 * Math.cos(angle); // Calculate x-coordinate
@@ -221,10 +239,11 @@ const Technology = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <div className="text-5xl md:text-7xl xl:text-9xl mb-4 py-4" style={{
-                          color: 'white',
+                    <div className={`overflow-y-hidden transition ease-in-out delay-150 text-white ${showAnimation ? 'scale-[20] opacity-80 animate-fade' : 'text-5xl md:text-7xl xl:text-[10rem]'}  mb-4 py-4`} style={{
+                        //   color: 'white',
                           textAlign: 'center',
-                          textShadow: 'black -5px 5px 0px, white 0px 5px 0px, #001180 8px 5px 0px',
+                          
+                        //   textShadow: 'black -5px 5px 0px, white 0px 5px 0px, #001180 8px 5px 0px',
                         //   textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
                         
                     }}>Technology</div>

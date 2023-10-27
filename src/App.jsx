@@ -32,7 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<div style={{ backgroundImage: `url(${home_bg2})`,}}><Home /><Satellite /><TechProd /><Footer /></div>} />
             {/* <Route path="/technology" element={<div><Technology /><EarthSat /><SatelliteConstellation /><Aeroplane /><GroundSatellite /><Footer /></div>} /> */}
-            <Route path="/technology" element={<div><Technology /><Footer /></div>} />
+            <Route path="/technology" element={<div className='overflow-x-hidden'><Technology /><Footer /></div>} />
             <Route path="/products" element={<div><Products /><Footer /></div>} />
             <Route path="/about" element={<div><AboutUs /><Footer /></div>} />
             <Route path="/contact" element={<div><ContactUs /><Questions /><Footer /></div>} />
