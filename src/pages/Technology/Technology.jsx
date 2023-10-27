@@ -20,6 +20,7 @@ const getRandomValue = (min, max) => {
 
 const Technology = () => {
     const [showAnimation, setShowAnimation] = useState(false);
+    const [showFade, setShowFade] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,12 @@ const Technology = () => {
         setShowAnimation(true);
       } else {
         setShowAnimation(false);
+      }
+      if (window.scrollY > window.innerHeight/2.5) {
+        console.log("window")
+        setShowFade(true);
+      } else {
+        setShowFade(false);
       }
     };
 
@@ -239,7 +246,7 @@ const Technology = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <div className={`overflow-y-hidden transition ease-in-out delay-150 text-white ${showAnimation ? 'scale-[20] opacity-80 animate-fade' : 'text-5xl md:text-7xl xl:text-[10rem]'}  mb-4 py-4`} style={{
+                    <div className={`overflow-y-hidden transition ease-in-out delay-150 text-white ${showAnimation ? 'scale-[20]' : 'text-5xl md:text-7xl xl:text-[10rem] opacity-100'}  ${showFade ? 'opacity-0' : 'opacity-100'}  mb-4 py-4`} style={{
                         //   color: 'white',
                           textAlign: 'center',
                           
