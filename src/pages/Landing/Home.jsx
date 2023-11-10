@@ -11,7 +11,7 @@ const Home = () => {
     width: '30vh',
     height: '40vh',
     position: 'absolute',
-    left: '20vh',
+    left: '15vh',
     top: '50vh',
   };
   const vectorImage2 = {
@@ -19,9 +19,6 @@ const Home = () => {
     backgroundSize: 'cover',
     width: '54vh',
     height: '50vh',
-    position: 'absolute',
-    left: '6vh',
-    top: '42vh',
   };
 
   const [isCardVisible, setIsCardVisible] = useState(false);
@@ -33,15 +30,15 @@ const Home = () => {
   return (
     <div className="text-white text-center items-center h-screen flex flex-col p-10 md:p-40 w-full">
       <div
-        className="absolute top-0 left-[-15vw] w-[100px] h-[100px] md:left-[0vw] md:w-full z-0"
+        className="block absolute top-0 w-full h-screen z-0"
         // style={{
         //   backgroundImage: `url(${home_bg})`,
         //   backgroundSize: 'cover',
         //   backgroundPosition: 'center',
         // }}
       >
-        <div style={vectorImage1} className="w-full h-full block  md:block"></div>
-        <div style={vectorImage2} className="w-full h-full block md:block"></div>
+        <div style={vectorImage1} className="md:block "></div>
+        <div style={vectorImage2} className="md:block absolute left-[-5vw] md:left-[3vw] top-[42vh] "></div>
       </div>
 
       <h1 className="uppercase mt-[80px] md:text-4xl xl:text-6xl font-bold z-10">
