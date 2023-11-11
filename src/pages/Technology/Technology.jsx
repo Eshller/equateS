@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import LaserBottom from "../../assets/LaserToBottom.svg";
 import airplane1 from "../../assets/airplane1.png";
 import airplane2 from "../../assets/airplane2.png";
 import ballon from "../../assets/ballon.png";
+import satellite_1 from "../../assets/satellite.png";
 import techno from "../../assets/tech.svg";
 import tech1 from "../../assets/tech1.png";
 import tech2 from "../../assets/tech2.png";
+import tech_3 from "../../assets/tech3.svg";
 import tech3 from "../../assets/tech_bg1.jpg";
-import tech from "../../assets/tech.png";
+import tech from "../../assets/tech.svg";
 import earth from "../../assets/earth.png";
 import earthSatelliteMesh from "../../assets/Earth_SatelliteMesh.svg";
 
@@ -14,34 +17,87 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import satellite from "../../assets/satellite.png";
 
 const Technology = () => {
- 
   const copy = "Technology".split("");
   const [showAnimation, setShowAnimation] = useState(false);
   const [showFade, setShowFade] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight/15) {
-        console.log("window")
-        setShowAnimation(true);
-      } else {
-        setShowAnimation(false);
-      }
-      if (window.scrollY > window.innerHeight/10) {
-        console.log("window")
-        setShowFade(true);
-      } else {
-        setShowFade(false);
-      }
-    };
+  const [rotationDegree, setRotationDegree] = useState(0);
 
-    window.addEventListener('scroll', handleScroll);
+    useEffect(() => {
+      const rotationInterval = setInterval(() => {
+        // Rotate the satellites by 1 degree every 100 milliseconds
+        setRotationDegree((prevRotation) => (prevRotation + 1) % 360);
+      }, 100);
+  
+      return () => {
+        clearInterval(rotationInterval);
+      };
+    }, []);
+
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > window.innerHeight / 15) {
+  //       console.log("window");
+  //       setShowAnimation(true);
+  //     } else {
+  //       setShowAnimation(false);
+  //     }
+  //     if (window.scrollY > window.innerHeight / 10) {
+  //       console.log("window");
+  //       setShowFade(true);
+  //     } else {
+  //       setShowFade(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    var header = document.getElementById("header");
+
+    function zoomFadeOnScroll(element) {
+      if (!element) {
+        return;
+      }
+
+      var distanceToTop =
+        window.scrollY + element.getBoundingClientRect().top - 200;
+      var elementHeight = element.offsetHeight + 100;
+      var scrollTop = document.documentElement.scrollTop;
+
+      var opacity = 1;
+      var scale = 0;
+
+      if (scrollTop > distanceToTop) {
+        opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+        scale = 1.1 + (scrollTop - distanceToTop - 340) / elementHeight;
+      }
+      if (scale < 20) {
+        element.style.scale = scale;
+      }
+      if (scale >= 5) {
+        element.style.opacity = "0";
+      }
+      if(opacity==1) element.style.opacity = opacity;
+      else if(opacity >= 0) element.style.opacity = opacity + 0.3;
+    }
+
+    function scrollHandler() {
+      zoomFadeOnScroll(header);
+    }
+
+    window.addEventListener("scroll", scrollHandler);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
-
 
   return (
     <ParallaxProvider>
@@ -51,14 +107,14 @@ const Technology = () => {
           // linear gradient from black to blue
           backgroundImage: `url(${tech})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: '100% 100%',
+          backgroundSize: "100% 100%",
           backgroundPosition: "center",
           // backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
         }}
       >
         {/* <img className="invisible" src={tech} alt="" /> */}
         <div className="">
-          <div 
+          <div
             className=" absolute w-[100vw] h-[100vh]  top-[0vh]  text-white"
             style={{
               //   color: 'white',
@@ -76,7 +132,6 @@ const Technology = () => {
             }}
           >
             <div 
-              id="header" 
               className={`overflow-hidden relative h-full w-full uppercase text-white mb-4`}
               style={
                 {
@@ -84,9 +139,10 @@ const Technology = () => {
                 }
               }
             >
-              <h1 className="overflow-hidden relative flex justify-center self-center h-full w-full lg:top-[0vh] xl:top-[-10vh] me-1">
-                <div
-                  className={`relative flex justify-center self-center text-[2rem] sm-[4rem] md:text-[8rem] lg:text-[10rem] transition ease-in-out duration-50 text-white ${showAnimation ? 'scale-[20]' : 'text-5xl md:text-7xl xl:text-[10rem] opacity-100'}  ${showFade ? 'opacity-0' : 'opacity-100'} `}
+              <h1 id = 'header' className="overflow-hidden transition linear duration-900 relative flex justify-center self-center h-full w-full lg:top-[0vh] xl:top-[-10vh] me-1">
+                <div 
+                  className={`relative flex justify-center self-center text-[3rem] sm-[5rem] md:text-[7rem] lg:text-[10rem] md:top-[10vh] text-white 
+                     `}
                 >
                   TECHNOLOGY
                 </div>
@@ -94,53 +150,87 @@ const Technology = () => {
             </div>
           </div>
           <div
-          className="overflow-hidden absolute top-[120vh] left-[0vw] w-[100vw] h-[135vh] z-0 "
-          style={{
-
-            backgroundImage: `url(${tech2})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "center",
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            flexFlow: "column wrap",
-          }}
-        >
-        </div>
-        <div className="absolute top-[260vh] left-[0vw] w-[100vw] h-[140vh]"
-        style={{
-
-          backgroundImage: `url(${tech3})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-          textAlign: "center",
-          display: "flex",
-          justifyContent: "center",
-          flexFlow: "column wrap",
-          }}
-        >
-            <div
-            className="relative w-[40vw] h-[80vh] top:[10vh] left-[19vw] md:w-[50vw] md:h-[80vh] md:left-[0vw] lg:left-[11vw] xl:left-[17vw] md:top-[6vh]"
+            className="overflow-hidden absolute top-[120vh] left-[0vw] w-[100vw] h-[135vh] z-0 "
             style={{
-              scale: '1.5'
+              backgroundImage: `url(${tech2})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% 100%",
+              backgroundPosition: "center",
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              flexFlow: "column wrap",
+            }}
+          ></div>
+          <div
+            className="overflow-hidden absolute top-[260vh] left-[0vw] w-[100vw] h-[140vh]"
+            style={{
+              backgroundImage: `url(${tech3})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% 100%",
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              flexFlow: "column wrap",
             }}
           >
-            <div
-              className={`relative w-[51vw] h-[20vh] top-[9vh] left-[3vw]`}
-              style={{}}
+            <div 
+              className=" relative w-[40vw] h-[80vh] top:[10vh] left-[19vw] md:w-[50vw] md:h-[80vh] md:left-[0vw] lg:left-[11vw] xl:left-[17vw] md:top-[6vh]"
+              style={{
+                scale: "1.5",
+              }}
             >
-              <img 
-                className="relative md:left-[20vh]"
-                src={earthSatelliteMesh}
-              />
+              <div
+                className={` relative w-[51vw] h-[20vh] top-[9vh] left-[3vw]`}
+                
+              >
+                <img 
+                  className="relative md:left-[20vh]"
+                  style={{
+                  }}
+                  src={earthSatelliteMesh}
+                />
+              </div>
             </div>
           </div>
+          <div className="overflow-hidden absolute top-[400vh] left-[0vw] w-[100vw] h-[633.6vh]"
+          style={{
+              backgroundImage: `url(${tech_3})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% 100%",
+              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              flexFlow: "column wrap",
+            }}
+          >
+                  <div className="z-100"
+                    style={{
+                        // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${tech6})`,
+                        // backgroundSize: 'cover',
+                        // backgroundPosition: 'center',
+                        // backgroundBlendMode: 'multiply',
+                    }}>
+                        <img src={satellite_1} className='w-[15vw] rotate-12 relative md:top-[-66vh] top-[-99vh] left-[78vw] lg:top-[-34vh] xl:top-[-38vh]' alt="" />
+                        <img src={satellite_1} className='w-[10vw] rotate-3 relative md:top-[-49vh] top-[-73vh] left-[10vw] lg:top-[-24vh] xl:top-[-25vh]' alt="" />
+                        <img src={satellite_1} className='w-[12vw] relative md:top-[-4vh] top-[-25vh] left-[80vw] lg:top-[16vh] xl:top-[13vh]' alt="" />
+                        <img src={ballon} className='w-[12vw] relative md:top-[138vh] top-[132vh] left-[78vw] lg:top-[145vh] xl:top-[143vh]' alt="" />
+                        <img src={ballon} className='w-[14vw] relative md:top-[212vh] top-[217vh] left-[70vw] lg:top-[204vh] xl:top-[207vh]' alt="" />
+                        <img src={ballon} className='w-[15vw] relative md:top-[135vh] top-[153vh] left-[12vw] lg:top-[115vh] xl:top-[113vh]' alt="" />
+                        <img src={airplane1} className='w-[20vw] relative md:top-[292vh] top-[312vh] left-[70vw] lg:top-[268vh] xl:top-[272vh]' alt="" />
+                        <img src={airplane2} className='w-[24vw] relative md:top-[234vh] top-[265vh] left-[5.5vw] lg:top-[200vh] xl:top-[206vh]' alt="" />
+                    <div className="h-screen">
+                    </div>
+                    <div className="h-screen">
+                    </div>
+                    <div className="h-screen">
+                    </div>
+                </div>
+              {/* <img src={tech_3} alt="" className="relative h-full w-full" /> */}
+          </div>
         </div>
-        </div>
-        
       </div>
-      </ParallaxProvider>
+    </ParallaxProvider>
   );
 };
 
