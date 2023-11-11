@@ -16,9 +16,7 @@ const Home = () => {
   };
   const vectorImage2 = {
     backgroundImage: `url(${home2})`,
-    backgroundSize: 'cover',
-    width: '54vh',
-    height: '50vh',
+    backgroundSize: 'cover'
   };
 
   const [isCardVisible, setIsCardVisible] = useState(false);
@@ -38,7 +36,7 @@ const Home = () => {
         // }}
       >
         <div style={vectorImage1} className="md:block "></div>
-        <div style={vectorImage2} className="md:block absolute left-[-5vw] md:left-[3vw] top-[42vh] "></div>
+        <div style={vectorImage2} className="relative left-[-5vw] md:left-[3vw] top-[42vh]  w-[54vh] h-[50vh]"></div>
       </div>
 
       <h1 className="uppercase mt-[80px] md:text-4xl xl:text-6xl font-bold z-10">
