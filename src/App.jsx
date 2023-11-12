@@ -16,6 +16,7 @@ import AboutUs from './pages/About/About';
 import ContactUs from './pages/Contact/Contact';
 // import home_bg2 from './assets/home_bg2.png';
 import home_bg2 from './assets/homenew.png';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <Router>
+    <ParallaxProvider>
       <div className="bg-black">
         <Header activeTab={activeTab} toggle={toggle} />
         <main className="absolute top-0 left-0 right-0 bg-black">
@@ -39,6 +41,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      </ParallaxProvider>
     </Router>
   );
 }
