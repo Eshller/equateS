@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 
 const Header = ({ activeTab, toggle }) => {
     const [dropDown, setDropDown] = useState(false);
@@ -65,7 +65,7 @@ const Header = ({ activeTab, toggle }) => {
         >
             <div className="mx-auto flex justify-between items-center p-2">
                 <div className="flex items-center">
-                    {/* <img src={logo} alt="Logo" className="h-20" /> */}
+                    <img src={logo} alt="Logo" className="h-20 w-auto" />
                     <div className='text-2xl font-bold text-white p-2 lg:hidden'>
                         <p>{getPageName()}</p>
                     </div>
@@ -88,8 +88,7 @@ const Header = ({ activeTab, toggle }) => {
                 </div>
                 <nav className="space-x-20 pr-20 text-2xl flex text-white hidden lg:flex p-2">
                     <NavLink
-                        to="/"
-                        exact
+                        exact='true' to="/"
                         className={`relative group flex items-center justify-center ${activeTab === 'home' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('home')}
                     >
@@ -97,7 +96,7 @@ const Header = ({ activeTab, toggle }) => {
                         Home
                     </NavLink>
                     <NavLink
-                        to="/technology"
+                        exact='true' to="/technology"
                         className={`relative group flex items-center justify-center ${activeTab === 'technology' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('technology')}
                     >
@@ -105,7 +104,7 @@ const Header = ({ activeTab, toggle }) => {
                         Technology
                     </NavLink>
                     <NavLink
-                        to="/products"
+                        exact='true' to="/products"
                         className={`relative group flex items-center justify-center   ${activeTab === 'products' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('products')}
                     >
@@ -113,7 +112,7 @@ const Header = ({ activeTab, toggle }) => {
                         Products
                     </NavLink>
                     <NavLink
-                        to="/about"
+                        exact='true' to="/about"
                         className={`relative group flex items-center justify-center   ${activeTab === 'about' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
                         onClick={() => toggle('about')}
                     >
