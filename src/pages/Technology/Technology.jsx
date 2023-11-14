@@ -163,7 +163,7 @@ const Technology = () => {
             ]}
           />
         </motion.div>
-        <div className="absolute h-[115vh] w-[100vw] overflow-hidden flex items-end justify-center  z-50">
+        <div className="absolute h-[115vh] w-[100vw] overflow-hidden flex items-end justify-center ">
         <motion.div className=" cursor-pointer text-white "
             style={{
               fontSize: "3vh"

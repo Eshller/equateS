@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import home_bg from '../../assets/home_bg.jpg';
 import home1 from '../../assets/home1.svg';
+import home1new from '../../assets/home1new.svg';
 import home2 from '../../assets/home2.svg';
 
 const Home = () => {
@@ -15,8 +16,8 @@ const Home = () => {
     top: '50vh',
   };
   const vectorImage2 = {
-    backgroundImage: `url(${home2})`,
-    backgroundSize: 'cover'
+    backgroundImage: `url(${home1new})`,
+    backgroundSize: '100% 100%'
   };
 
   const [isCardVisible, setIsCardVisible] = useState(false);
@@ -28,15 +29,15 @@ const Home = () => {
   return (
     <div className="text-white text-center items-center h-screen flex flex-col p-10 md:p-40 w-full">
       <div
-        className="block absolute top-0 w-full h-screen z-0"
+        className="absolute top-[55vh] sm:top-[55vh] md:top-[59vh] lg:top-[53vh] flex justify-center items-center left-[2vw] md:left-[2vw] lg:left-[-5vw] h-[30vh] md:h-[34vh] lg:h-[45vh] w-[91vw] md:w-[44vw] lg:w-[55vw"
         // style={{
         //   backgroundImage: `url(${home_bg})`,
         //   backgroundSize: 'cover',
         //   backgroundPosition: 'center',
         // }}
       >
-        <div style={vectorImage1} className="md:block "></div>
-        <div style={vectorImage2} className="relative left-[-5vw] md:left-[3vw] top-[42vh]  w-[54vh] h-[50vh]"></div>
+        {/* <div style={vectorImage1} className="md:block "></div> */}
+        <div style={vectorImage2} className="relative w-full h-full p-3"></div>
       </div>
 
       <h1 className="uppercase mt-[80px] md:text-4xl xl:text-6xl font-bold z-10">

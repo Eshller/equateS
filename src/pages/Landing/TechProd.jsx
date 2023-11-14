@@ -240,7 +240,7 @@ const TechProd = () => {
                         transition: 'background-color 0.3s', // Background color transition
                     }}
                 >
-                    <h2 className="text-6xl md:text-9xl font-bold mb-6 mt-10">Products</h2>
+                    <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 mt-10">Products</h2>
                     <p className="text-2xl mb-8">
                         {/* {prodDesc[selectedProduct]} */}
                     </p>
@@ -293,7 +293,7 @@ const TechProd = () => {
                     {selectedProduct && (
                         <div>
                             <img src={productImages[selectedProduct]} alt={`${selectedProduct}`} className="w-3/4 h-96 md:h-[400px] hover:scale-110 transform transition duration-500" />
-                            <p className="text-2xl mb-8 border-2 border-white p-4 bg-gray-900 md:mt-10">
+                            <p className="text-2xl mb-8 border-2 border-white p-4 bg-gray-900 md:mt-[-10vh] lg:mt-10">
                                 {prodDesc[selectedProduct]}
                             </p>
                         </div>
