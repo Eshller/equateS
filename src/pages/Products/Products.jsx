@@ -78,7 +78,7 @@ const Products = () => {
       </div>
       <div className="p-5 py-10">
         {productData.map((product, index) => (
-          <div className="" key={index}>
+          <div className="pt-10" key={index}>
             <ProductCard title={product.title} image={product.image} details={product.details} position={product.position} />
           </div>
         ))}
