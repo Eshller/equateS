@@ -234,24 +234,24 @@ const TechProd = () => {
                 className="md:h-screen md:flex justify-center items-center text-white p-2 overflow-hidden"
             >
                 <div
-                    className="container mx-auto p-4 px-10 md:w-1/2 md:h-2/3 rounded-xl items-center justify-center"
+                    className="container mx-auto p-4 px-10 md:w-1/2 md:h-2/3 lg:w-2/3 lg:h-2/3 rounded-xl flex flex-col md:block items-center justify-center"
                     style={{
                         backgroundColor: 'rgba(155, 155, 155, 0.7)',
                         transition: 'background-color 0.3s', // Background color transition
                     }}
                 >
-                    <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 mt-10">Products</h2>
+                    <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 mt-10 md:mt-5">Products</h2>
                     <p className="text-2xl mb-8">
                         {/* {prodDesc[selectedProduct]} */}
                     </p>
-                    <div className="md:flex mt-20">
+                    <div className="md:flex lg:mt-20 xl:mt-8 mt-20 md:mt-20">
                         <button
                             id="button-product1"
                             onClick={() => handleProductClick('product1')}
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product1' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod1} alt="product1" className="h-40 w-48 rounded-full" />
+                            <img src={homeprod1} alt="product1" className="h-[10rem] w-[12rem] md:h-[6rem] md:w-[18rem] lg:h-[10rem] lg:w-[23rem] xl:w-[40rem] xl:h-[14rem] rounded-full" />
                         </button>
                         <button
                             id="button-product2"
@@ -259,7 +259,7 @@ const TechProd = () => {
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product2' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod2} alt="product2" className="h-40 w-48 rounded-full" />
+                            <img src={homeprod2} alt="product2" className="h-40 w-48  md:h-[6rem] md:w-[18rem] lg:h-[10rem] lg:w-[23rem] xl:w-[40rem] xl:h-[14rem] rounded-full" />
                         </button>
                         <button
                             id="button-product3"
@@ -267,7 +267,7 @@ const TechProd = () => {
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product3' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod3} alt="product3" className="h-40 w-48 rounded-full" />
+                            <img src={homeprod3} alt="product3" className="h-40 w-48 md:h-[6rem] md:w-[18rem] lg:h-[10rem] lg:w-[23rem] xl:w-[40rem] xl:h-[14rem] rounded-full" />
                         </button>
                         <button
                             id="button-product4"
@@ -275,7 +275,7 @@ const TechProd = () => {
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product4' ? '' : ''
                                 }`}
                         >
-                            <img src={homeprod4} alt="product4" className="h-40 w-48 rounded-full" />
+                            <img src={homeprod4} alt="product4" className="h-40 w-48 md:h-[6rem] md:w-[18rem] lg:h-[10rem] lg:w-[23rem] xl:w-[40rem] xl:h-[14rem] rounded-full" />
                         </button>
                     </div>
                     <hr
@@ -289,10 +289,10 @@ const TechProd = () => {
                         }}
                     />
                 </div>
-                <div className="md:w-2/5 md:rounded-lg md:overflow-hidden ">
+                <div className="md:w-2/5 md:rounded-lg md:overflow-hidden lg:w-3/5 md:ml-3">
                     {selectedProduct && (
                         <div>
-                            <img src={productImages[selectedProduct]} alt={`${selectedProduct}`} className="w-3/4 h-96 md:h-[400px] hover:scale-110 transform transition duration-500" />
+                            <img src={productImages[selectedProduct]} alt={`${selectedProduct}`} className="w-3/4 h-96  md:h-[400px] hover:scale-110 transform transition duration-500" />
                             <p className="text-2xl mb-8 border-2 border-white p-4 bg-gray-900 md:mt-[-10vh] lg:mt-10">
                                 {prodDesc[selectedProduct]}
                             </p>
