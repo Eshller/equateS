@@ -4,23 +4,18 @@ import airplane1 from "../../assets/airplane1.png";
 import airplane2 from "../../assets/airplane2.png";
 import ballon from "../../assets/ballon.png";
 import satellite_1 from "../../assets/satellite.png";
-import techno from "../../assets/tech.svg";
-import tech1 from "../../assets/tech1.png";
-import tech2 from "../../assets/tech2.png";
+import tech1_back from "../../assets/tech1.png";
+import tech1 from "../../assets/tech1.svg";
+import tech2 from "../../assets/tech2.svg";
 import tech_3 from "../../assets/tech3.svg";
-import tech3 from "../../assets/tech_bg1.jpg";
-import tech from "../../assets/tech.svg";
-import earth from "../../assets/earth.png";
+import tech3 from "../../assets/tech__3.svg";
 import earthSatelliteMesh from "../../assets/Earth_SatelliteMesh.svg";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 import {
   Parallax,
   ParallaxBanner,
-  ParallaxProvider,
 } from "react-scroll-parallax";
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
-import satellite from "../../assets/satellite.png";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 const Technology = () => {
   const [rotationDegree, setRotationDegree] = useState(0);
@@ -56,7 +51,7 @@ const Technology = () => {
 
   return (
     <div
-      className="h-[1038vh] w-[100vw] mb-[5vh] -z-30"
+      className="h-[1033vh] w-[100vw] mb-[5vh] -z-30"
       style={{
         // linear gradient from black to blue
         background: 'linear-gradient(180deg, rgba(22,22,27, 0.5) 20%, rgba(19,32,48,1) 12.7%, rgba(2,17,45,0.5) 15%, rgba(8,9,11,1) 44%)'
@@ -66,19 +61,26 @@ const Technology = () => {
     >
       {/* <img className="invisible" src={tech} alt="" /> */}
       <div className="">
+      <div className="absolute h-[120vh] w-[100vw]" style={{
+        backgroundImage: `url(${tech1_back})`,
+          backgroundRepeat: "no-repeat",
+          
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center",
+      }}>
       <MouseParallaxContainer className=' absolute h-[120vh] w-[100vw]' globalFactorX={0.1} globalFactorY={0.1}>
-      
-      <MouseParallaxChild className='absolute h-[130vh] w-[150vw] flex justify-start items-center' factorX={0.5} factorY={0.5}>
+      <MouseParallaxChild className='absolute h-[130vh] w-[150vw] flex justify-start items-center opacity-70' factorX={0.5} factorY={0.5}>
         <img className="block absolute left-[-5vw] h-full top-[-5vh] w-[110vw]" src={tech1} alt="" />
       </MouseParallaxChild>
       <motion.div
           style={{
             // backgroundImage: `url(${tech1})`,
             // backgroundRepeat: "no-repeat",
+            
             // backgroundSize: "100% 100%",
-            backgroundPosition: "center",
+            // backgroundPosition: "center",
           }}
-          className="absolute h-full w-full "
+          className="absolute h-full w-full"
           // initial={{ x: '0%' }}
           // animate={{ x: '100%' }}
           // transition={{ duration: 10, ease: 'linear', repeat: Infinity }}
@@ -100,7 +102,7 @@ const Technology = () => {
                 scaleX: [1, 2.7],
                 children: (
                   <div className="relative h-full w-full ">
-                    <div className="h-full w-full relative flex items-center justify-center">
+                    <div className="h-full w-full relative flex items-center justify-center z-100">
                       <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[12vh] xl:text-[14vh] text-white font-bold" style={{
                           fontFamily: 'Myfont, serif',
                       }}>
@@ -127,7 +129,8 @@ const Technology = () => {
           </motion.div>
         </div>
     </MouseParallaxContainer>
-        <div className="absolute top-[123vh] left-[0vw] w-[100vw] h-[134vh] "
+    </div>
+        <div className="absolute top-[120vh] left-[0vw] w-[100vw] h-[156vh]"
         style={{
           backgroundImage: `url(${tech2})`,
           backgroundRepeat: "no-repeat",
@@ -136,7 +139,7 @@ const Technology = () => {
 
         </div>
         <div
-          className="overflow-visible absolute top-[260vh] left-[0vw] w-[100vw] h-[140vh] z-20"
+          className="overflow-visible absolute top-[260vh] left-[0vw] w-[100vw] h-[146vh] z-20"
           style={{
             backgroundImage: `url(${tech3})`,
             backgroundRepeat: "no-repeat",
