@@ -82,7 +82,7 @@ const Technology = () => {
           // initial={{ x: '0%' }}
           // animate={{ x: '100%' }}
           // transition={{ duration: 10, ease: 'linear', repeat: Infinity }}
-          initial={{ opacity: 0.7 }}
+          initial={{ opacity: 0.9 }}
           animate={{ opacity: 1 }}
           transition={{
             duration: 10,
@@ -101,7 +101,9 @@ const Technology = () => {
                 children: (
                   <div className="relative h-full w-full ">
                     <div className="h-full w-full relative flex items-center justify-center">
-                      <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[12vh] xl:text-[14vh] text-white font-bold">
+                      <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[12vh] xl:text-[14vh] text-white font-bold" style={{
+                          fontFamily: 'Myfont, serif',
+                      }}>
                         TECHNOLOGY
                       </h1>
                     </div>

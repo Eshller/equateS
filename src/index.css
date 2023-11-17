@@ -1,5 +1,12 @@
-*{
-  color:white
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/AquireLight-YzE0o.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  color: rgba(255, 255, 255, 0.87);
 }
 
 root {
