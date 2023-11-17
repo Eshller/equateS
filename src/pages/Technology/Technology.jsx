@@ -5,10 +5,10 @@ import airplane2 from "../../assets/airplane2.png";
 import ballon from "../../assets/ballon.png";
 import satellite_1 from "../../assets/satellite.png";
 import tech1_back from "../../assets/tech1.png";
-import tech1 from "../../assets/tech1.svg";
-import tech2 from "../../assets/tech2.svg";
+import tech1 from "../../assets/tech1.jpg";
+import tech2 from "../../assets/tech2.jpg";
 import tech_3 from "../../assets/tech3.svg";
-import tech3 from "../../assets/tech__3.svg";
+import tech3 from "../../assets/tech__3.jpg";
 import earthSatelliteMesh from "../../assets/Earth_SatelliteMesh.svg";
 import {
   Parallax,
@@ -61,15 +61,15 @@ const Technology = () => {
     >
       {/* <img className="invisible" src={tech} alt="" /> */}
       <div className="">
-      <div className="absolute h-[120vh] w-[100vw]" style={{
+      <div className="absolute h-[120vh] w-[100vw] oveerflow-visible" style={{
         backgroundImage: `url(${tech1_back})`,
           backgroundRepeat: "no-repeat",
           
-          backgroundSize: "100% 100%",
+          backgroundSize: "cover",
           backgroundPosition: "center",
       }}>
       <MouseParallaxContainer className=' absolute h-[120vh] w-[100vw]' globalFactorX={0.1} globalFactorY={0.1}>
-      <MouseParallaxChild className='absolute h-[130vh] w-[150vw] flex justify-start items-center opacity-70' factorX={0.5} factorY={0.5}>
+      <MouseParallaxChild className='absolute h-[130vh] w-[150vw] flex justify-start items-center opacity-0 md:opacity-0 lg:opacity-70' factorX={0.5} factorY={0.5}>
         <img className="block absolute left-[-5vw] h-full top-[-5vh] w-[110vw]" src={tech1} alt="" />
       </MouseParallaxChild>
       <motion.div
@@ -143,7 +143,7 @@ const Technology = () => {
           style={{
             backgroundImage: `url(${tech3})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "100% 100%",
+            backgroundSize: "cover",
             textAlign: "center",
             display: "flex",
             justifyContent: "center",
@@ -180,7 +180,7 @@ const Technology = () => {
         
           <div className="z-50 transition ease-in-out">
             <Parallax
-              className="w-[15vw] rotate-12 relative md:top-[-222vh] top-[-259vh] left-[78vw] lg:top-[-204vh] xl:top-[-187vh]"
+              className="w-[15vw] rotate-12 relative md:top-[-224vh] top-[-259vh] left-[78vw] lg:top-[-204vh] xl:top-[-200vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
@@ -191,7 +191,7 @@ const Technology = () => {
               />
             </Parallax>
             <Parallax
-              className="w-[10vw] rotate-3 relative md:top-[-205vh] top-[-230vh] left-[10vw] lg:top-[-194vh] xl:top-[-179vh]"
+              className="w-[10vw] rotate-3 relative md:top-[-205vh] top-[-230vh] left-[10vw] lg:top-[-194vh] xl:top-[-189vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
@@ -220,14 +220,14 @@ const Technology = () => {
               <img src={ballon} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[14vw] relative md:top-[60vh] top-[63vh] left-[70vw] lg:top-[56vh] xl:top-[45vh]"
+              className="w-[14vw] relative md:top-[60vh] top-[63vh] left-[70vw] lg:top-[56vh] xl:top-[50vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
               <img src={ballon} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[15vw] relative md:top-[-25vh] top-[-4vh] left-[12vw] lg:top-[-39vh] xl:top-[-49vh]"
+              className="w-[15vw] relative md:top-[-25vh] top-[-4vh] left-[12vw] lg:top-[-39vh] xl:top-[-40vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
