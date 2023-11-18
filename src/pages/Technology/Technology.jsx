@@ -7,7 +7,8 @@ import tech1_back from "../../assets/tech1.jpg";
 import tech1 from "../../assets/tech1.jpg";
 import tech2 from "../../assets/tech2.jpg";
 import tech_3 from "../../assets/tech3.svg";
-import tech3 from "../../assets/tech__3.jpg";
+// import tech3 from "../../assets/tech__3.jpg";
+import tech3 from "../../assets/tech3new.jpg";
 import earthSatelliteMesh from "../../assets/Earth_SatelliteMesh.svg";
 import {
   Parallax,
@@ -138,19 +139,16 @@ const Technology = () => {
 
         </div>
         <div
-          className="absolute top-[260vh] w-[100vw] h-[146vh] z-20 flex justify-center items-center"
+          className="absolute top-[260vh] w-[100vw] h-[778vh] overflow-hidden"
           style={{
             backgroundImage: `url(${tech3})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center",
-            flexFlow: "column wrap",
+            backgroundSize: "100% 100%",
+            backgroundPosition:'center'
           }}
         >
           <div
-            className=" relative w-[100vw] h-[100vh] z-10 overflow-hidden"
+            className=" relative w-[100vw] h-[100vh] top-[19vh] md:top-[19vh] z-10 overflow-hidden"
           >
             <div className={`relative top-[10vh] md:top-[23vh] w-full h-full md:scale-150`} style={{
               backgroundImage: `url(${earthSatelliteMesh})`,
@@ -158,27 +156,9 @@ const Technology = () => {
               backgroundSize: "contain",
               backgroundPosition:'center'
             }}>
-              {/* <img
-                className="relative h-full w-full top-[23vh]"
-                style={{}}
-                src={earthSatelliteMesh}
-              /> */}
             </div>
           </div>
-        </div>
-
-        {/* <svg className=" z-50" width="4000" height="4000"><line x1="100" y1="2500" x2="100" y2="3700" stroke="red"/></svg> */}
-
-        <div
-          className="overflow-hidden absolute top-[381vh] left-[0vw] w-[100vw] h-[657vh]"
-          style={{
-            backgroundImage: `url(${tech_3})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100% 100%"
-          }}
-        >
-        
-          <div className="z-50">
+          <div className="absolute top-[135vh] z-50">
             <Parallax
               className="w-[13vw] rotate-12 absolute top-[37vh] left-[79vw]"
               scaleY={[1.4, 2.1]}
@@ -234,14 +214,14 @@ const Technology = () => {
               <img src={ballon} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[24vw] absolute top-[473vh] md:top-[469vh] lg:top-[466vh] left-[2vw]"
+              className="w-[24vw] absolute top-[463vh] md:top-[459vh] lg:top-[456vh] left-[2vw]"
               scaleY={[1.4, 2.2]}
               scaleX={[1.4, 2.4]}
             >
               <img src={airplane2} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[20vw]  absolute top-[516vh] md:top-[513vh] left-[71vw]"
+              className="w-[20vw]  absolute top-[506vh] md:top-[503vh] left-[71vw]"
               scaleY={[1.4, 2.2]}
               scaleX={[1.4, 2.4]}
             >
@@ -249,6 +229,10 @@ const Technology = () => {
             </Parallax>
             </div>
         </div>
+
+        {/* <svg className=" z-50" width="4000" height="4000"><line x1="100" y1="2500" x2="100" y2="3700" stroke="red"/></svg> */}
+
+          
       </div>
     </div>
   );
