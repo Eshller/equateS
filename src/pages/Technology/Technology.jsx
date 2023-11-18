@@ -139,7 +139,7 @@ const Technology = () => {
 
         </div>
         <div
-          className="overflow-visible absolute top-[260vh] left-[0vw] w-[100vw] h-[146vh] z-20"
+          className="absolute top-[260vh] w-[100vw] h-[146vh] z-20 flex justify-center items-center"
           style={{
             backgroundImage: `url(${tech3})`,
             backgroundRepeat: "no-repeat",
@@ -151,17 +151,19 @@ const Technology = () => {
           }}
         >
           <div
-            className=" relative w-[45vw] h-[30vh] top:[10vh] left-[16vw] md:w-[50vw] md:h-[80vh] md:left-[0vw] lg:left-[11vw] xl:left-[17vw] md:top-[-2vh] lg:top-[-3vh] z-10"
-            style={{
-              scale: "1.5",
-            }}
+            className=" relative w-[100vw] h-[100vh] z-10 overflow-hidden"
           >
-            <div className={` relative w-[55vw] h-[20vh] top-[9vh] left-[3vw]`}>
-              <img
-                className="relative md:left-[20vh]"
+            <div className={`relative top-[10vh] md:top-[23vh] w-full h-full md:scale-150`} style={{
+              backgroundImage: `url(${earthSatelliteMesh})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition:'center'
+            }}>
+              {/* <img
+                className="relative h-full w-full top-[23vh]"
                 style={{}}
                 src={earthSatelliteMesh}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -180,7 +182,7 @@ const Technology = () => {
         
           <div className="z-50 transition ease-in-out">
             <Parallax
-              className="w-[15vw] rotate-12 relative md:top-[-224vh] top-[-259vh] left-[78vw] lg:top-[-204vh] xl:top-[-200vh]"
+              className="w-[15vw] rotate-12 relative md:top-[-224vh] top-[-259vh] left-[78vw] lg:top-[-204vh] xl:top-[-185vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
@@ -191,7 +193,7 @@ const Technology = () => {
               />
             </Parallax>
             <Parallax
-              className="w-[10vw] rotate-3 relative md:top-[-205vh] top-[-230vh] left-[10vw] lg:top-[-194vh] xl:top-[-189vh]"
+              className="w-[10vw] rotate-3 relative md:top-[-205vh] top-[-230vh] left-[10vw] lg:top-[-194vh] xl:top-[-181vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
@@ -202,7 +204,7 @@ const Technology = () => {
               />
             </Parallax>
             <Parallax
-              className="w-[12vw] relative md:top-[-159vh] top-[-183vh] left-[80vw] lg:top-[-151vh] xl:top-[-147vh]"
+              className="w-[12vw] relative md:top-[-159vh] top-[-183vh] left-[80vw] lg:top-[-151vh] xl:top-[-141vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
@@ -220,28 +222,28 @@ const Technology = () => {
               <img src={ballon} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[14vw] relative md:top-[60vh] top-[63vh] left-[70vw] lg:top-[56vh] xl:top-[50vh]"
+              className="w-[14vw] relative md:top-[60vh] top-[63vh] left-[70vw] lg:top-[56vh] xl:top-[46vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
               <img src={ballon} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[15vw] relative md:top-[-25vh] top-[-4vh] left-[12vw] lg:top-[-39vh] xl:top-[-40vh]"
+              className="w-[15vw] relative md:top-[-25vh] top-[-4vh] left-[12vw] lg:top-[-39vh] xl:top-[-51vh]"
               scaleY={[1.4, 2.1]}
               scaleX={[1.4, 2.3]}
             >
               <img src={ballon} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[24vw] relative md:top-[106vh] top-[126vh] left-[5vw] lg:top-[87vh] xl:top-[85vh]"
+              className="w-[24vw] relative md:top-[106vh] top-[126vh] left-[5vw] lg:top-[87vh] xl:top-[80vh]"
               scaleY={[1.4, 2.2]}
               scaleX={[1.4, 2.4]}
             >
               <img src={airplane2} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             <Parallax
-              className="w-[20vw] relative md:top-[133vh] top-[161vh] left-[70vw] lg:top-[122vh] xl:top-[111vh]"
+              className="w-[20vw] relative md:top-[133vh] top-[161vh] left-[70vw] lg:top-[122vh] xl:top-[107vh]"
               scaleY={[1.4, 2.2]}
               scaleX={[1.4, 2.4]}
             >
