@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import LaserBottom from "../../assets/LaserToBottom.svg";
 import airplane1 from "../../assets/airplane1.png";
 import airplane2 from "../../assets/airplane2.png";
 import ballon from "../../assets/ballon.png";
