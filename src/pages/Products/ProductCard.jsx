@@ -12,14 +12,13 @@ const ProductCard = ({ title, image, details, position }) => {
       {/* Small Screens */}
       <div className="lg:hidden">
         <div className="justify-center items-center text-center py-10 px-2">
-          <p className="text-4xl mb-4">{title}</p>
+          <p className="text-4xl mb-4 text-white">{title}</p>
           <div className="flex flex-row justify-center">
             <img src={image} alt={title} className="w-64 mt-8 mb-8" />
           </div>
           <p className="text-xl">{details}</p>
         </div>
-
-      </div >
+      </div>
 
       {/* Large Screens */}
       <div className="hidden lg:flex z-30">

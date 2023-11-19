@@ -1,398 +1,241 @@
-import React, { useEffect, useState } from 'react';
-import tech1 from '../../assets/tech1.png';
-import tech2 from '../../assets/tech2.png';
-import tech3 from '../../assets/tech3.png';
-import tech4 from '../../assets/tech4.png';
-import tech5 from '../../assets/tech5.png';
-import tech6 from '../../assets/tech6.png';
-import airplane1 from '../../assets/airplane1.png';
-import airplane2 from '../../assets/airplane2.png';
-import ballon from '../../assets/ballon.png';
-import techno from '../../assets/tech.png';
-import earth from '../../assets/earth.png';
-
-import { ParallaxProvider } from 'react-scroll-parallax';
-import satellite from '../../assets/satellite.png';
-
-const getRandomValue = (min, max) => {
-    return (Math.random() * (max - min) + min).toFixed(2) + 's';
-};
+import React, { useEffect, useState } from "react";
+import airplane1 from "../../assets/airplane1.png";
+import airplane2 from "../../assets/airplane2.png";
+import ballon from "../../assets/ballon.png";
+import satellite_1 from "../../assets/satellite.png";
+import tech1_back from "../../assets/tech1.jpg";
+import tech1 from "../../assets/tech1.jpg";
+import tech2 from "../../assets/tech2.jpg";
+import tech_3 from "../../assets/tech3.svg";
+// import tech3 from "../../assets/tech__3.jpg";
+import tech3 from "../../assets/tech3new.jpg";
+import earthSatelliteMesh from "../../assets/Earth_SatelliteMesh.svg";
+import {
+  Parallax,
+  ParallaxBanner,
+} from "react-scroll-parallax";
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+import { motion, useAnimation } from "framer-motion";
 
 const Technology = () => {
-    const [showAnimation, setShowAnimation] = useState(false);
-    const [showFade, setShowFade] = useState(false);
-
+  const [rotationDegree, setRotationDegree] = useState(0);
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight/10) {
-        console.log("window")
-        setShowAnimation(true);
-      } else {
-        setShowAnimation(false);
-      }
-      if (window.scrollY > window.innerHeight/2.5) {
-        console.log("window")
-        setShowFade(true);
-      } else {
-        setShowFade(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    const rotationInterval = setInterval(() => {
+      // Rotate the satellites by 1 degree every 100 milliseconds
+      setRotationDegree((prevRotation) => (prevRotation + 1) % 360);
+    }, 100);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      clearInterval(rotationInterval);
     };
   }, []);
-    // const satellites = [...Array(6)].map((_, index) => {
-    //     const angle = (index / 6) * 2 * Math.PI; // Equally spaced angles
-    //     const endpointX = 40 * Math.cos(angle); // Calculate x-coordinate
-    //     const endpointY = 47 * Math.sin(angle); // Calculate y-coordinate
-    //     const animationDuration = getRandomValue(8, 12); // Random duration between 8s and 12s
+  const controls = useAnimation();
+  useEffect(() => {
+    const jumpAnimation = async () => {
+      while (true) {
+        await controls.start({
+          y: -10,
+          transition: { duration: 0.5, ease: "easeInOut", repeat: Infinity },
+        });
+        await new Promise((resolve) => setTimeout(resolve, 50));
+        await controls.start({
+          y: 0,
+          transition: { duration: 0.5, ease: "easeInOut", repeat: Infinity },
+        });
+        await new Promise((resolve) => setTimeout(resolve, 50));
+      }
+    };
 
-    //     return (
-    //         <div
-    //             key={index}
-    //             className="w-16 h-16 absolute"
-    //             style={{
-    //                 backgroundImage: `url(${satellite})`,
-    //                 backgroundSize: 'cover',
-    //                 animation: `bounce ${animationDuration} linear infinite, satellitePath${index} ${animationDuration} linear infinite`,
-    //                 transform: `translate(${endpointX}vw, ${endpointY}vh)`,
-    //                 zIndex: 10 + index, // Ensure proper layering
-    //             }}
-    //         ></div>
-    //     );
-    // });
+    jumpAnimation();
+  }, [controls]);
 
-    const [rotationDegree, setRotationDegree] = useState(0);
+  return (
+    <div
+      className="h-[1033vh] w-[100vw] mb-[5vh] -z-30"
+      style={{
+        // linear gradient from black to blue
+        background: 'linear-gradient(180deg, rgba(22,22,27, 0.5) 20%, rgba(19,32,48,1) 12.7%, rgba(2,17,45,0.5) 15%, rgba(8,9,11,1) 44%)'
 
-    useEffect(() => {
-      const rotationInterval = setInterval(() => {
-        // Rotate the satellites by 1 degree every 100 milliseconds
-        setRotationDegree((prevRotation) => (prevRotation + 1) % 360);
-      }, 100);
-  
-      return () => {
-        clearInterval(rotationInterval);
-      };
-    }, []);
-  
-    const satellites = [
-      {
-        name: 'Satellite 1',
-        info: 'Information for Satellite 1.',
-        position: {
-          x: '15%',
-          y: '15%',
-        },
-      },
-      {
-        name: 'Satellite 2',
-        info: 'Information for Satellite 2.',
-        position: {
-          x: '80%',
-          y: '80%',
-        },
-      },
-      {
-        name: 'Satellite 3',
-        info: 'Information for Satellite 3.',
-        position: {
-          x: '15%',
-          y: '80%',
-        },
-      },
-      {
-        name: 'Satellite 4',
-        info: 'Information for Satellite 4.',
-        position: {
-          x: '85%',
-          y: '15%',
-        },
-      },
-      {
-        name: 'Satellite 5',
-        info: 'Information for Satellite 5.',
-        position: {
-          x: '40%',
-          y:'10%',
-        },
-      },
-      {
-        name: 'Satellite 6',
-        info: 'Information for Satellite 6.',
-        position: {
-          x: '45%',
-          y: '80%',
-        },
-      },
-      {
-        name: 'Satellite 6',
-        info: 'Information for Satellite 6.',
-        position: {
-          x: '80%',
-          y: '45%',
-        },
-      },
-      {
-        name: 'Satellite 7',
-        info: 'Information for Satellite 7.',
-        position: {
-          x: '10%',
-          y: '40%',
-        },
-      },
-      {
-        name: 'Satellite 8',
-        info: 'Information for Satellite 8.',
-        position: {
-          x: '20%',
-          y: '30%',
-        },
-      },
-      {
-        name: 'Satellite 9',
-        info: 'Information for Satellite 9.',
-        position: {
-          x: '30%',
-          y: '20%',
-        },
-      },
-      {
-        name: 'Satellite 10',
-        info: 'Information for Satellite 10.',
-        position: {
-          x: '60%',
-          y: '20%',
-        },
-      },
-      {
-        name: 'Satellite 11',
-        info: 'Information for Satellite 11.',
-        position: {
-          x: '20%',
-          y: '60%',
-        },
-      },
-      {
-        name: 'Satellite 12',
-        info: 'Information for Satellite 12.',
-        position: {
-          x: '60%',
-          y: '75%',
-        },
-      },
-      {
-        name: 'Satellite 13',
-        info: 'Information for Satellite 12.',
-        position: {
-          x: '75%',
-          y: '60%',
-        },
-      },
-      {
-        name: 'Satellite 12',
-        info: 'Information for Satellite 12.',
-        position: {
-          x: '85%',
-          y: '75%',
-        },
-      },
-    //   {
-    //     name: 'Satellite 12',
-    //     info: 'Information for Satellite 12.',
-    //     position: {
-    //       x: '10%',
-    //       y: '90%',
-    //     },
-    //   },
-    //   {
-    //     name: 'Satellite 12',
-    //     info: 'Information for Satellite 12.',
-    //     position: {
-    //       x: '20%',
-    //       y: '90%',
-    //     },
-    //   },
-    ];
-
-    return (
-        <ParallaxProvider>
-            <div className=''
-                style={{
-                    // linear gradient from black to blue
-                    backgroundImage: `url(${techno})`,
-                    backgroundSize: '100% 100%',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    // backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
-                }}>
-                <div className="h-screen"
-                    style={{
-//                         background-image:
-//             linear-gradient(45deg, 
-//               rgba(245,70,66, 0.75), 
-//               rgba(8,83,156, 0.75)), url(
-// 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png');
-                        // backgroundImage: `linear-gradient(45deg, 
-                        //     rgba(245,70,66, 0.75), 
-                        //     rgba(8,83,156, 0.75)),url(${tech1})`,
-                        // backgroundSize: 'cover',
-                        // backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply',
-                        display:'flex',
-                        alignItems:'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <div className={`overflow-y-hidden uppercase transition ease-in-out delay-150 text-white ${showAnimation ? 'scale-[20]' : 'text-5xl md:text-7xl xl:text-[10rem] opacity-100'}  ${showFade ? 'opacity-0' : 'opacity-100'}  mb-4 py-4`} style={{
-                        //   color: 'white',
-                          textAlign: 'center',
-                          
-                        //   textShadow: 'black -5px 5px 0px, white 0px 5px 0px, #001180 8px 5px 0px',
-                        //   textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000'
-                        
-                    }}>Technology</div>
-                </div>
-                <div className="h-screen"
-                    style={{
-                        // background:`url(${tech2}) center/cover no-repeat`,
-                        
-                        // WebkitMask:'linear-gradient(to top, transparent 5%, black 100%)', 
-                        // backgroundImage: `linear-gradient( rgb(0 0 0 / 75%),rgb(255 255 255 / 0%), rgb(0 0 0 / 75%)), url(${tech2})`,
-                        // backgroundImage: `linear-gradient(90deg, rgb(20 16 16 / 70%), rgb(0 0 0 / 75%)), url(${tech2})`,
-                        // backgroundSize: 'cover',
-                        // backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply',
-                    }}
-                >
-                </div>
-                <div className="h-screen"
-                    style={{
-                        // backgroundImage: `url(${tech3})`,
-                        // backgroundSize: 'cover',
-                        // backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply',
-                    }}
-                >
-            <div
-          className="relative top-[170vh] left-[30px] md:top-[160vh] md:left-[25vw] w-[90vw] h-[90vw] lg:w-[100vh] lg:h-full border rounded-full items-center justify-center flex z-20"
+        // backgroundImage: 'linear-gradient(to bottom, #000000, #0000ff)',
+      }}
+    >
+      {/* <img className="invisible" src={tech} alt="" /> */}
+      <div className="">
+      <div className="absolute h-[120vh] w-[100vw] oveerflow-visible" style={{
+        backgroundImage: `url(${tech1_back})`,
+          backgroundRepeat: "no-repeat",
+          
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+      }}>
+      <MouseParallaxContainer className=' absolute h-[120vh] w-[100vw]' globalFactorX={0.1} globalFactorY={0.1}>
+      <MouseParallaxChild className='absolute h-[130vh] w-[150vw] flex justify-start items-center opacity-0 md:opacity-0 lg:opacity-70' factorX={0.5} factorY={0.5}>
+        <img className="block absolute left-[-5vw] h-full top-[-5vh] w-[110vw]" src={tech1_back} alt="" />
+      </MouseParallaxChild>
+      <motion.div
           style={{
-            // top:'160vh',
-            // left:'25vw',
-            transform: `rotate(${rotationDegree}deg)`,
-            transformOrigin: 'center center',
-            transition: 'transform 0.05s ease-in-out', // Smooth transition
+            // backgroundImage: `url(${tech1})`,
+            // backgroundRepeat: "no-repeat",
+            
+            // backgroundSize: "100% 100%",
+            // backgroundPosition: "center",
+          }}
+          className="absolute h-full w-full"
+          // initial={{ x: '0%' }}
+          // animate={{ x: '100%' }}
+          // transition={{ duration: 10, ease: 'linear', repeat: Infinity }}
+          initial={{ opacity: 0.9 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "mirror",
           }}
         >
-          {satellites.map((site, index) => (
-            <div
-              key={index}
-              className="w-8 h-8 absolute  z-10"
-              style={{
-                top: site.position.y,
-                left: site.position.x,
-                cursor: 'pointer',
-                transform: `rotate(${-rotationDegree}deg)`,
-                transformOrigin: 'center center',
-                transition: 'transform 0.05s ease-in-out', // Smooth transition
-              }}
-            >
-              <img src={satellite} alt="satellite" className="w-8 h-8 md:w-16 md:h-16" />
-            </div>
-          ))}
+          <ParallaxBanner
+            className="absolute h-full w-full aspect-[2/1]"
+            layers={[
+              {
+                speed: 30,
+                scaleY: [1, 2.4],
+                scaleX: [1, 2.7],
+                children: (
+                  <div className="relative h-full w-full ">
+                    <div className="h-full w-full relative flex items-center justify-center z-100">
+                      <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[12vh] xl:text-[14vh] text-white font-bold" style={{
+                          fontFamily: 'Myfont, serif',
+                      }}>
+                        TECHNOLOGY
+                      </h1>
+                    </div>
+                  </div>
+                ),
+              },
+            ]}
+          />
+        </motion.div>
+        <div className="absolute h-[115vh] w-[100vw] flex items-end justify-center ">
+        <motion.div className=" cursor-pointer text-white "
+            style={{
+              fontSize: "3vh"
+            }}
+            animate={controls}
+          >
+            <Parallax speed={-5} className="relative bottom-28">
+            Scroll Down
+            </Parallax>
+
+          </motion.div>
         </div>
-                    {/* {satellites} */}
-                </div>
-                {/* <style>
-                {[...Array(6)].map((_, index) => (
-                    `
-                    @keyframes satellitePath${index} {
-                        0% {
-                            transform: translate(50*vw, 50*vh);
-                        }
-                        25% {
-                            transform: translate(${(Math.random()) * 100}vw, ${(Math.random()) * 100}vh);
-                        }
-                        50% {
-                            transform: translate(${(Math.random() ) * 100}vw, ${(Math.random() ) * 100}vh);
-                        }
-                        75% {
-                            transform: translate(${(Math.random() ) * 100}vw, ${(Math.random() ) * 100}vh);
-                        }
-                        100% {
-                            transform: translate(50*vw, 50*vh);
-                        }
-                    }
-                    `
-                ))}
-            </style> */}
-            
-                <div
-                    style={{
-                        // backgroundImage: `linear-gradient(to bottom, rgb(0 0 0 / 13%), rgb(90 185 255 / 88%)),url(${tech4})`,
-                        // backgroundSize: 'cover',
-                        // backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply',
-                    }}>
-                       <img src={earth} className='w-[30vw] relative top-[80vh] left-[35vw]' alt="" />
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                </div>
-                {/* <div
-                    style={{
-                        backgroundImage: `url(${grade})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundBlendMode: 'multiply',
-                    }}>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                </div> */}
-                <div
-                    style={{
-                        // backgroundImage: `linear-gradient(rgb(255 255 255), rgb(0 70 122 / 88%), rgba(56, 110, 172, 0.77)),url(${tech5})`,
-                        // backgroundSize: 'cover',
-                        // backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply',
-                    }}>
-                         <img src={satellite} className='w-[20vw] md:w-[100px] relative top-[10vh] left-[10vw]' alt="" />
-                         <img src={satellite} className='w-[20vw] md:w-[100px] rotate-45 relative top-[50vh] left-[60vw]' alt="" />
-                         <img src={satellite} className='w-[20vw] md:w-[100px] rotate-90 relative top-[-40vh] left-[70vw]' alt="" />
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                </div>
-                <div
-                    style={{
-                        // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${tech6})`,
-                        // backgroundSize: 'cover',
-                        // backgroundPosition: 'center',
-                        // backgroundBlendMode: 'multiply',
-                    }}>
-                        <img src={ballon} className='w-[20vw] relative top-[-30vh] left-[30vw]' alt="" />
-                        <img src={ballon} className='w-[10vw] relative top-[-10vh] left-[80vw]' alt="" />
-                        <img src={ballon} className='w-[15vw] relative top-[30vh] left-[10vw]' alt="" />
-                        <img src={airplane1} className='w-[20vw] relative top-[60vh] left-[60vw]' alt="" />
-                        <img src={airplane2} className='w-[20vw] relative top-[100vh] left-[10vw]' alt="" />
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                    <div className="h-screen">
-                    </div>
-                </div>
+    </MouseParallaxContainer>
+    </div>
+        <div className="absolute top-[120vh] left-[0vw] w-[100vw] h-[156vh]"
+        style={{
+          backgroundImage: `url(${tech2})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100% 100%",
+        }}>
+
+        </div>
+        <div
+          className="absolute top-[260vh] w-[100vw] h-[778vh] overflow-hidden"
+          style={{
+            backgroundImage: `url(${tech3})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% 100%",
+            backgroundPosition:'center'
+          }}
+        >
+          <div
+            className=" relative w-[100vw] h-[100vh] top-[19vh] md:top-[19vh] z-10 overflow-hidden"
+          >
+            <div className={`relative top-[10vh] md:top-[23vh] w-full h-full md:scale-150`} style={{
+              backgroundImage: `url(${earthSatelliteMesh})`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition:'center'
+            }}>
             </div>
-        </ParallaxProvider>
-    );
+          </div>
+          <div className="absolute top-[135vh] z-50">
+            <Parallax
+              className="w-[13vw] rotate-12 absolute top-[37vh] left-[79vw]"
+              scaleY={[1.4, 2.1]}
+              scaleX={[1.4, 2.3]}
+            >
+              <img
+                src={satellite_1}
+                className="scale-150 md:scale-100"
+                alt=""
+              />
+            </Parallax>
+            <Parallax
+              className="w-[10vw] rotate-3 absolute top-[75vh] md:top-[70vh] lg:top-[68v9] xl:top-[65vh] left-[10vw]"
+              scaleY={[1.4, 2.1]}
+              scaleX={[1.4, 2.3]}
+            >
+              <img
+                src={satellite_1}
+                className="scale-150 md:scale-100"
+                alt=""
+              />
+            </Parallax>
+            <Parallax
+              className="w-[12vw] absolute top-[129vh] md:top-[124vh] left-[79vw]"
+              scaleY={[1.4, 2.1]}
+              scaleX={[1.4, 2.3]}
+            >
+              <img
+                src={satellite_1}
+                className="scale-150 md:scale-100"
+                alt=""
+              />
+            </Parallax>
+            <Parallax
+              className="w-[12vw] absolute top-[293vh] md:top-[283vh] lg:top-[276vh] xl:top-[268vh] left-[77vw]"
+              scaleY={[1.4, 2.1]}
+              scaleX={[1.4, 2.3]}
+            >
+              <img src={ballon} className="scale-150 md:scale-100" alt="" />
+            </Parallax>
+            <Parallax
+              className="w-[14vw] absolute top-[332vh] md:top-[322vh] lg:top-[311vh] xl:top-[304vh] left-[12vw]"
+              scaleY={[1.4, 2.1]}
+              scaleX={[1.4, 2.3]}
+            >
+              <img src={ballon} className="scale-150 md:scale-100" alt="" />
+            </Parallax>
+            <Parallax
+              className="w-[15vw] absolute top-[388vh] md:top-[375vh] lg:top-[366vh] xl:top-[357vh] left-[70vw]"
+              scaleY={[1.4, 2.1]}
+              scaleX={[1.4, 2.3]}
+            >
+              <img src={ballon} className="scale-150 md:scale-100" alt="" />
+            </Parallax>
+            <Parallax
+              className="w-[24vw] absolute top-[463vh] md:top-[459vh] lg:top-[456vh] left-[2vw]"
+              scaleY={[1.4, 2.2]}
+              scaleX={[1.4, 2.4]}
+            >
+              <img src={airplane2} className="scale-150 md:scale-100" alt="" />
+            </Parallax>
+            <Parallax
+              className="w-[20vw]  absolute top-[506vh] md:top-[503vh] left-[71vw]"
+              scaleY={[1.4, 2.2]}
+              scaleX={[1.4, 2.4]}
+            >
+              <img src={airplane1} className="scale-150 md:scale-100" alt="" />
+            </Parallax>
+            </div>
+        </div>
+
+        {/* <svg className=" z-50" width="4000" height="4000"><line x1="100" y1="2500" x2="100" y2="3700" stroke="red"/></svg> */}
+
+          
+      </div>
+    </div>
+  );
 };
 
 export default Technology;
