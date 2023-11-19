@@ -21,46 +21,36 @@ import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 
 
 function App() {
-  const [activeTab, setActiveTab] = useState('home');
+  // const [activeTab, setActiveTab] = useState('home');
 
-  const toggle = (tab) => {
-    setActiveTab(tab);
-  };
+  // const toggle = (tab) => {
+  //   setActiveTab(tab);
+  // };
   
-  const containerRef = useRef(null)
+  // const containerRef = useRef(null)
 
   return (
+    // <ParallaxProvider>
+    //   <Router>
+    //     <div className="bg-black d">
+    //       <Header activeTab={activeTab} toggle={toggle} />
+    //       <main  className="absolute top-0 left-0 right-0 bg-black">
+    //         <Routes>
+    //           <Route path="/" element={<div style={{ backgroundImage: `url(${home_bg2})`,}}><Home /><Satellite /><TechProd /><Footer /></div>} />
+    //           {/* <Route path="/technology" element={<div><Technology /><EarthSat /><SatelliteConstellation /><Aeroplane /><GroundSatellite /><Footer /></div>} /> */}
+    //           <Route path="/technology" element={<div ><Technology  /><Footer /></div>} />
+    //           <Route path="/products" element={<div><Products /><Footer /></div>} />
+    //           <Route path="/about" element={<div><AboutUs /><Footer /></div>} />
+    //           <Route path="/contact" element={<div><ContactUs /><Questions /><Footer /></div>} />
+    //         </Routes>
+    //       </main>
+    //     </div>
+    //   </Router>
+    // </ParallaxProvider>
+    <div className="h-screen w-[100vw] flex justify-center content-center items-center">
+      <h1 className="text-black font-bold content-center text-3xl md:text-7xl">Under development</h1>
+    </div>
 
-    // <LocomotiveScrollProvider
-    //   options={
-    //     {
-    //       // smooth: true
-    //     }
-    //   }
-    //   watch={
-    //     [
-    //     ]
-    //   }
-    //   containerRef={containerRef}
-    // >
-    <ParallaxProvider>
-      <Router>
-        <div className="bg-black d">
-          <Header activeTab={activeTab} toggle={toggle} />
-          <main  className="absolute top-0 left-0 right-0 bg-black">
-            <Routes>
-              <Route path="/" element={<div style={{ backgroundImage: `url(${home_bg2})`,}}><Home /><Satellite /><TechProd /><Footer /></div>} />
-              {/* <Route path="/technology" element={<div><Technology /><EarthSat /><SatelliteConstellation /><Aeroplane /><GroundSatellite /><Footer /></div>} /> */}
-              <Route path="/technology" element={<div ><Technology  /><Footer /></div>} />
-              <Route path="/products" element={<div><Products /><Footer /></div>} />
-              <Route path="/about" element={<div><AboutUs /><Footer /></div>} />
-              <Route path="/contact" element={<div><ContactUs /><Questions /><Footer /></div>} />
-            </Routes>
-          </main>
-        </div>
-      </Router>
-    </ParallaxProvider>
-    // </LocomotiveScrollProvider>
   );
 }
 
