@@ -40,15 +40,15 @@ const Home = () => {
         <div style={vectorImage2} className="relative w-full h-full p-3"></div>
       </div>
 
-      <h1 className="uppercase mt-[80px] md:text-4xl xl:text-6xl font-bold z-10">
+      <h1 className="uppercase mt-[80px] text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold z-10">
         Multi-Orbital Optical Communication Payloads in Space
       </h1>
-      <div className="z-10 w-full text-right">
+      <div className="z-10 w-full text-center">
       <button
-        className="relative top-[20vh] md:top-[40vh] w-[70px] height-[80px] bg-blue-700 hover:bg-blue-500 hover:scale-105 transition duration-200 text-white text-3xl lg:text-6xl font-bold rounded z-10 opacity-80"
+        className="relative top-[41vh] md:top-[30vh] md:left-[30vw] lg:left-[34vw] lg:top-[20vh] xl:top-[25vh] w-[130px] h-[50px] bg-violet-600 hover:bg-voilet-500 hover:scale-105 transition duration-200 text-white text-[1rem] lg:text-xl font-bold rounded z-10 opacity-90"
         onClick={toggleCard}
       >
-        <h2 className="relative top-[-10px]">+</h2>
+        <h6 className="relative">Learn More</h6>
       </button>
       </div>
     
