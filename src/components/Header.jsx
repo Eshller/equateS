@@ -86,7 +86,7 @@ const Header = ({ activeTab, toggle }) => {
                         )}
                     </button>
                 </div>
-                <nav className="space-x-20 pr-20 text-2xl flex text-white hidden lg:flex p-2">
+                <nav className="space-x-10 pr-10 text-2xl flex text-white hidden lg:flex">
                     <NavLink
                         exact='true' to="/"
                         className={`relative group flex items-center justify-center ${activeTab === 'home' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
@@ -119,13 +119,13 @@ const Header = ({ activeTab, toggle }) => {
                         <div className="h-1 w-full -mb-2 bg-violet-600 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         About Us
                     </NavLink>
-                    {/* <NavLink
+                    <NavLink
                         to="/contact"
                         className={` p-3 hover:bg-blue-500 hover:scale-110 transition duration-500 ${activeTab === 'contact' ? 'bg-gray-200 text-purple-700 hover:text-purple-700' : 'bg-purple-700 hover:text-white text-white'}`}
                         onClick={() => toggle('contact')}
                     >
                         Contact Us
-                    </NavLink> */}
+                    </NavLink>
 
                 </nav>
                 <nav

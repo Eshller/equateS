@@ -48,11 +48,11 @@ const ProductCard = ({ title, image, details, position }) => {
                 <img
                   src={image}
                   alt={title}
-                  className="relative top-[90px] left-[50px] xl:left-[100px]  w-[65vh] h-[65vh] hover:scale-110 transform transition duration-500 ease-in-out shadow-inner  drop-shadow-2xl"
+                  className="relative top-[90px] left-[40px] xl:left-[80px]  w-[65vh] h-[65vh] hover:scale-110 transform transition duration-500 ease-in-out shadow-inner  drop-shadow-2xl"
                 />
               </div>
-              <div className="relative text-left top-[170px] left-[200px] xl:left-[300px] 2xl:left-[300px] w-1/2">
-                <p className="text-4xl xl:text-6xl mb-4 py-4">{title}</p>
+              <div className="relative text-left top-[170px] left-[160px] xl:left-[250px] 2xl:left-[250px] w-1/2">
+                <p className="text-4xl xl:text-6xl mb-4 py-4 ">{title}</p>
                 <p className="text-xl">{details}</p>
               </div>
             </div>

@@ -23,7 +23,7 @@ const Questions = () => {
   };
 
   return (
-    <div style={{ background: 'linear-gradient(360deg, rgba(152, 21, 214, 0.8) 0%, rgba(152, 21, 214, 0) 100%)' }} className="relative p-10 md:p-20">
+    <div style={{ background: 'linear-gradient(360deg, rgba(152, 21, 214, 0.8) 0%, rgba(152, 21, 214, 0) 100%)' }} className="relative p-10 md:p-20 mt-[12vh]">
       <h2 className="text-3xl md:text-6xl font-bold mb-4">Questions?</h2>
       <h2 className="text-xl md:text-5xl mb-4 md:pb-10">Connect to us today!</h2>
 
@@ -32,7 +32,7 @@ const Questions = () => {
           <div className="flex flex-col md:flex-row mb-4">
             <div className="mb-2 md:w-1/2 md:pr-2">
               <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                First Name
+                First Name <span className='text-red-700'>*</span>
               </label>
               <input
                 type="text"
@@ -40,14 +40,14 @@ const Questions = () => {
                 name="firstName"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border rounded-md text-black"
                 required
               />
             </div>
 
             <div className="mb-2 md:w-1/2 md:pl-2">
               <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-                Last Name
+                Last Name <span className='text-red-700'>*</span>
               </label>
               <input
                 type="text"
@@ -55,7 +55,7 @@ const Questions = () => {
                 name="lastName"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border rounded-md text-black"
                 required
               />
             </div>
@@ -63,7 +63,7 @@ const Questions = () => {
 
           <div className="mb-4">
             <label htmlFor="businessEmail" className="block text-sm font-medium text-gray-700">
-              Business Email
+              Business Email <span className='text-red-700'>*</span>
             </label>
             <input
               type="email"
@@ -71,7 +71,7 @@ const Questions = () => {
               name="businessEmail"
               value={businessEmail}
               onChange={(e) => setBusinessEmail(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border rounded-md text-black"
               required
             />
           </div>
@@ -79,7 +79,7 @@ const Questions = () => {
           <div className="flex flex-col md:flex-row mb-4">
             <div className="mb-2 md:w-1/2 md:pr-2">
               <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                Company
+                Company <span className='text-red-700'>*</span>
               </label>
               <input
                 type="text"
@@ -87,14 +87,14 @@ const Questions = () => {
                 name="company"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border rounded-md text-black"
                 required
               />
             </div>
 
             <div className="mb-2 md:w-1/2 md:pl-2">
               <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
-                Phone Number
+                Phone Number <span className='text-red-700'>*</span>
               </label>
               <input
                 type="tel"
@@ -102,7 +102,7 @@ const Questions = () => {
                 name="phoneNumber"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border rounded-md text-black"
                 required
               />
             </div>
@@ -110,21 +110,22 @@ const Questions = () => {
 
           <div className="mb-4">
             <label htmlFor="productOfInterest" className="block text-sm font-medium text-gray-700">
-              Product of Interest
+              Product of Interest <span className='text-red-700'>*</span>
             </label>
             <select
               id="productOfInterest"
               name="productOfInterest"
               value={productOfInterest}
               onChange={(e) => setProductOfInterest(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border rounded-md text-black"
               required
             >
-              <option value="" disabled>
+              <option className='text-black' value="" disabled>
                 Please Select
               </option>
-              <option value="Product1">Product 1</option>
-              <option value="Product2">Product 2</option>
+              <option className='text-black' value="Product1">Product 1</option>
+              <option className='text-black' value="Product2">Product 2</option>
+              <option className='text-black' value="Product3">Product 3</option>
               {/* Add more product options as needed */}
             </select>
           </div>
@@ -138,7 +139,7 @@ const Questions = () => {
               name="comments"
               value={comments}
               onChange={(e) => setComments(e.target.value)}
-              className="w-full px-3 py-2 border rounded-md"
+              className="w-full px-3 py-2 border rounded-md text-black"
               rows="4"
             />
           </div>

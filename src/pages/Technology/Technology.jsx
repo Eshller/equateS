@@ -103,7 +103,7 @@ const Technology = () => {
                 children: (
                   <div className="relative h-full w-full ">
                     <div className="h-full w-full relative flex items-center justify-center z-100">
-                      <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[12vh] xl:text-[14vh] text-white font-bold" style={{
+                      <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[11vh] xl:text-[14vh] text-white font-bold" style={{
                           fontFamily: 'Myfont, serif',
                       }}>
                         TECHNOLOGY

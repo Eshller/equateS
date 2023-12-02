@@ -7,7 +7,7 @@ import naren from '../../assets/naren.jpg';
 
 const AboutUs = () => {
   return (
-    <div className="bg-black justify-center items-center">
+    <div className="bg-black justify-center items-center mt-[12vh]">
       <div className="lg:h-screen flex justify-center items-center">
         <div
           className="w-full h-full"
@@ -21,10 +21,10 @@ const AboutUs = () => {
       </div>
 
       <div className="lg:hidden flex justify-center items-center max-h-96">
-        <img src={logo} alt="logo" className="w-full" />
+        <img src={logo} alt="logo" className="w-full m-3" />
       </div>
 
-      <div className="">
+      <div className="mt-0 lg:mt-[12vh]">
         {/* About Us Card */}
         <div className="lg:ml-40 flex flex-col items-center lg:items-start">
           <div className="bg-zinc-900 p-4 m-4 w-5/6 lg:w-3/4 md:flex justify-start text-left items-start shadow-2xl shadow-purple-700 mt-4 mb-0 relative z-20 hover:scale-110 transform transition duration-500 ease-in-out hover:z-30">

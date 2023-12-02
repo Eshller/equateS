@@ -4,7 +4,7 @@ import product1_vector from '../../assets/product1_vector.svg';
 import product1 from '../../assets/product1.png';
 import product2_vector from '../../assets/product2_vector.svg';
 import product2 from '../../assets/product2new.png';
-import product3_vector from '../../assets/product3_vector.svg';
+import product3_vector from '../../assets/product3_vector4.svg';
 import product3 from '../../assets/product3.png';
 import product4 from '../../assets/product4.png';
 
@@ -63,12 +63,12 @@ const vectorImage3 = {
   height: '50vh',
   position: 'absolute',
   left: '0',
-  top: '220vh',
+  top: '240vh',
 };
 
 const Products = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden mt-[12vh]">
       <div className="hidden lg:block">
         <div className="relative">
           <div className="absolute" style={vectorImage1}></div>
@@ -76,7 +76,7 @@ const Products = () => {
           <div className="absolute" style={vectorImage3}></div>
         </div>
       </div>
-      <div className="p-5 py-10">
+      <div className="p-4 py-10">
         {productData.map((product, index) => (
           <div className="pt-10" key={index}>
             <ProductCard title={product.title} image={product.image} details={product.details} position={product.position} />

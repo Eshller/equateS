@@ -15,7 +15,8 @@ import Questions from './pages/Products/Questions';
 import AboutUs from './pages/About/About';
 import ContactUs from './pages/Contact/Contact';
 // import home_bg2 from './assets/home_bg2.png';
-import home_bg2 from './assets/homenew.png';
+import home_bg2 from './assets/homenew2.png';
+// import home_bg2 from './assets/homenew.png';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 
@@ -36,12 +37,12 @@ function App() {
           <Header activeTab={activeTab} toggle={toggle} />
           <main  className="absolute top-0 left-0 right-0 bg-black">
             <Routes>
-              <Route path="/" element={<div style={{ backgroundImage: `url(${home_bg2})`,}}><Home /><Satellite /><TechProd /><Footer /></div>} />
+              <Route path="/" element={<div style={{ backgroundImage: `url(${home_bg2})`, backgroundSize: 'cover'}}><Home /><Satellite /><TechProd /><Footer /></div>} />
               {/* <Route path="/technology" element={<div><Technology /><EarthSat /><SatelliteConstellation /><Aeroplane /><GroundSatellite /><Footer /></div>} /> */}
               <Route path="/technology" element={<div ><Technology  /><Footer /></div>} />
               <Route path="/products" element={<div><Products /><Footer /></div>} />
               <Route path="/about" element={<div><AboutUs /><Footer /></div>} />
-              <Route path="/contact" element={<div><ContactUs /><Questions /><Footer /></div>} />
+              <Route path="/contact" element={<div><Questions /><Footer /></div>} />
             </Routes>
           </main>
         </div>

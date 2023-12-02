@@ -89,7 +89,7 @@ const TechProd = () => {
     };
 
     return (
-        <div
+        <div className='relative'
             style={{
                 // backgroundImage: `url(${home_bg2})`,
                 // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${home_bg2})`,
