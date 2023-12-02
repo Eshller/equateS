@@ -28,7 +28,7 @@ const Questions = () => {
       <h2 className="text-xl md:text-5xl mb-4 md:pb-10">Connect to us today!</h2>
 
       <div className="bg-gray-300 p-5 md:p-10 w-full md:w-1/2 container rounded-md md:rounded-xl">
-        <form onSubmit={handleSubmit}>
+        <form className=' relative z-50' onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row mb-4">
             <div className="mb-2 md:w-1/2 md:pr-2">
               <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
@@ -152,7 +152,7 @@ const Questions = () => {
         </form>
       </div>
       <div
-        className="hidden md:block absolute right-0 bottom-0 w-3/5 h-[140vh] z-10"
+        className="hidden md:block absolute right-0 bottom-0 w-3/5 h-[140vh] z-10 mb-20"
         style={{
           backgroundImage: `url(${astronaut})`,
           backgroundSize: 'cover',

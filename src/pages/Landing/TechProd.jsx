@@ -293,7 +293,7 @@ const TechProd = () => {
                             width: 0.5 * whiteBarStyle.width,
                             height: '5px',
                             background: 'white',
-                            transition: 'left 0.3s, width 0.3s',
+                            transition: 'left 0.9s, width 0.9s',
                         }}
                     />
                 </div>

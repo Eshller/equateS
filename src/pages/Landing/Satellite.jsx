@@ -9,12 +9,12 @@ const Satellite = () => {
 
       {/* Planet */}
       <div
-        className="md:h-[100vh] flex flex-col w-full h-[70vh] text-white items-center justify-center z-10"
+        className="md:h-[140vh] flex flex-col w-full h-[100vh] text-white items-center justify-center z-10"
       >
       </div>
 
       <div className="h-0">
-        <div className="absolute top-[100vh] left-[0vh]  md:top-[120vh]  md:w-[100vw] md:h-[70vh] w-[100vw] h-[90vh] items-center justify-center flex z-0 ">
+        <div className="absolute top-[120vh] left-[0vh]  md:top-[169vh]  md:w-[100vw] md:h-[70vh] w-[100vw] h-[90vh] items-center justify-center flex z-0 ">
               <div
                 className="relative top-[-10vh] md:top-[10vh] h-[53vh] w-[90vw] sm:h-[80vh] sm:w-[100vw] md:w-[100vh] md:h-[110vh] "
                 style={{

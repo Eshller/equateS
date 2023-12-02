@@ -7,6 +7,8 @@ import product2 from '../../assets/product2new.png';
 import product3_vector from '../../assets/product3_vector4.svg';
 import product3 from '../../assets/product3.png';
 import product4 from '../../assets/product4.png';
+import ContactUs from '../Contact/Contact';
+import Questions from './Questions';
 
 const productData = [
   {
@@ -83,6 +85,10 @@ const Products = () => {
           </div>
         ))}
       </div>
+      <div className='relative top-[-10vh]'> 
+      <Questions/>
+      </div>
+
     </div>
   );
 };
