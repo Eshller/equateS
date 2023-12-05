@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
-const Header = ({ activeTab, toggle }) => {
+const Header = ({ activeTab, toggle}) => {
     const [dropDown, setDropDown] = useState(false);
     const [isHeaderVisible, setHeaderVisible] = useState(true);
     const dropdownRef = useRef(null);
