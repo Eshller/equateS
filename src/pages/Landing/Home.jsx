@@ -41,16 +41,14 @@ const Home = () => {
       </div>
 
       <h1 className="uppercase mt-[80px] text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold z-10">
-        Multi-Orbital Optical Communication Payloads in Space
-      </h1>
-      <div className="z-10 w-full text-center">
-      <button
-        className="relative top-[41vh] md:top-[30vh] md:left-[30vw] lg:left-[34vw] lg:top-[20vh] xl:top-[25vh] w-[130px] h-[50px] bg-violet-600 hover:bg-voilet-500 hover:scale-105 transition duration-200 text-white text-[1rem] lg:text-xl font-bold rounded z-10 opacity-90"
+        Multi-Orbital Optical Communication Payloads in Space <br />
+        <button
+        className="relative mt-56 md:mt-10 xl:mt-0 w-[130px] h-[50px] bg-violet-600 hover:bg-voilet-500 hover:scale-105 transition duration-200 text-white text-[1rem] lg:text-xl font-bold rounded z-10 opacity-90"
         onClick={toggleCard}
       >
         <h6 className="relative">Learn More</h6>
       </button>
-      </div>
+      </h1>
     
 
       {isCardVisible && (
