@@ -85,7 +85,7 @@ const Products = () => {
           </div>
         ))}
       </div>
-      <div className='relative top-[-10vh]'> 
+      <div className='relative -mb-16  top-[-10vh]'> 
       <Questions/>
       </div>
 

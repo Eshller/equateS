@@ -13,15 +13,16 @@ const AboutUs = () => {
           className="w-full h-full"
           style={{
             backgroundImage: `url(${logo})`,
-            backgroundSize: 'cover',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            marginTop: '80px'
+            marginTop: '10vh'
           }}
         ></div>
       </div>
 
       <div className="lg:hidden flex justify-center items-center max-h-96">
-        <img src={logo} alt="logo" className="w-full m-3" />
+        <img src={logo} alt="logo" className="w-full m-5" />
       </div>
 
       <div className="mt-0 lg:mt-[12vh]">
