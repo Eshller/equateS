@@ -244,12 +244,12 @@ const TechProd = () => {
                     <p className="text-lg xl:text-2xl mb-8 h-12 lg:h-16 xl:h-24">
                         {prodDesc[selectedProduct]}
                     </p>
-                    <div className="md:flex md:flex-row flex-col justify-center items-center lg:mt-20 xl:mt-8 mt-20 md:mt-20">
+                    <div className="md:flex md:flex-row flex-col justify-center items-center lg:mt-12 xl:mt-8 mt-20 md:mt-20">
                         <button
                             id="button-product1"
                             onClick={() => handleProductClick('product1')}
-                            className={`p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product1' ? '' : ''
-                                }`}
+                            className={`p-2 border-none hover:scale-110 transform transition duration-500 ${selectedProduct === 'product1' ? '' : ''
+                                }`} style={{outline:'none'}}
                         >
                             <img src={homeprod1} alt="product1" className="relative h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
@@ -257,7 +257,7 @@ const TechProd = () => {
                             id="button-product2"
                             onClick={() => handleProductClick('product2')}
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product2' ? '' : ''
-                                }`}
+                                }`} style={{outline:'none'}}
                         >
                             <img src={homeprod2} alt="product2" className="relative h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
@@ -265,7 +265,7 @@ const TechProd = () => {
                             id="button-product3"
                             onClick={() => handleProductClick('product3')}
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product3' ? '' : ''
-                                }`}
+                                }`} style={{outline:'none'}}
                         >
                             <img src={homeprod3} alt="product3" className="relative h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
@@ -273,7 +273,7 @@ const TechProd = () => {
                             id="button-product4"
                             onClick={() => handleProductClick('product4')}
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product4' ? '' : ''
-                                }`}
+                                }`} style={{outline:'none'}}
                         >
                             <img src={homeprod4} alt="product4" className="relative  h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
