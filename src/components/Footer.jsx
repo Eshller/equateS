@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <footer style={footerStyle} className="absolute left-0 right-0 p-4 mt-auto w-full bg-black">
-            <div className="container mx-auto flex justify-between items-center">
+            <div className="container mx-auto flex justify-between items-center relative top-4">
                 <div className="mb-4 p-1.5">
                     <h4 className="text-xl font-bold">olee.space</h4>
                     <p>Pune, MH</p>

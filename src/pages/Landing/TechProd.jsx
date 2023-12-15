@@ -89,7 +89,7 @@ const TechProd = () => {
     };
 
     return (
-        <div
+        <div className='relative'
             style={{
                 // backgroundImage: `url(${home_bg2})`,
                 // backgroundImage: `linear-gradient(rgba(25, 79, 114, 0.42), rgb(224, 224, 224)),url(${home_bg2})`,
@@ -231,7 +231,7 @@ const TechProd = () => {
 
             {/* Our Products */}
             <div
-                className="md:h-screen md:flex justify-center items-center text-white p-2 overflow-hidden"
+                className="md:h-[50vh] lg:h-screen md:flex justify-center items-center text-white p-2 overflow-hidden"
             >
                 <div
                     className="container text-center mx-auto p-4 px-10 md:w-1/2 md:h-2/3 lg:w-2/3 lg:h-2/3 rounded-xl flex flex-col md:block items-center justify-center"
@@ -241,59 +241,51 @@ const TechProd = () => {
                     }}
                 >
                     <h2 className=" text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 mt-10 md:mt-5">Products</h2>
-                    {/* <p className="text-2xl mb-8">
+                    <p className="text-lg xl:text-2xl mb-8 h-12 lg:h-16 xl:h-24">
                         {prodDesc[selectedProduct]}
-                    </p> */}
-                    <div className="md:flex md:flex-row flex-col justify-center items-center lg:mt-20 xl:mt-8 mt-20 md:mt-20">
-                        {/* <button
-                            id="button-product1"
-                            onClick={() => handleProductClick('product1')}
-                            className={`p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product1' ? '' : ''
-                                }`}
-                        >
-                            <img src={homeprod1} alt="product1" className="relative h-full w-full rounded-full" />
-                        </button> */}
+                    </p>
+                    <div className="md:flex md:flex-row flex-col justify-center items-center relative lg:mt-12 xl:mt-6 mt-20 md:mt-20">
                         <button
                             id="button-product1"
                             onClick={() => handleProductClick('product1')}
-                            className={`text-2xl  p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product1' ? '' : ''
-                                }`}
+                            className={`p-2 border-none hover:scale-110 transform transition duration-500 ${selectedProduct === 'product1' ? '' : ''
+                                }`} style={{outline:'none'}}
                         >
-                            <img src={homeprod1} alt="product1" className="relative h-full w-full md:h-[15vh] lg:h-[25vh] xl:h-[30vh] md:w-[30vw] rounded-full" />
+                            <img src={homeprod1} alt="product1" className="relative h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
                         <button
                             id="button-product2"
                             onClick={() => handleProductClick('product2')}
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product2' ? '' : ''
-                                }`}
+                                }`} style={{outline:'none'}}
                         >
-                            <img src={homeprod2} alt="product2" className="relative h-full w-full md:h-[15vh] lg:h-[25vh] xl:h-[30vh] md:w-[30vw] rounded-full" />
+                            <img src={homeprod2} alt="product2" className="relative h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
                         <button
                             id="button-product3"
                             onClick={() => handleProductClick('product3')}
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product3' ? '' : ''
-                                }`}
+                                }`} style={{outline:'none'}}
                         >
-                            <img src={homeprod3} alt="product3" className="relative h-full w-full md:h-[15vh] lg:h-[25vh] xl:h-[30vh] md:w-[30vw] rounded-full" />
+                            <img src={homeprod3} alt="product3" className="relative h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
                         <button
                             id="button-product4"
                             onClick={() => handleProductClick('product4')}
                             className={`text-2xl p-2 hover:border-0 border-0 hover:scale-110 transform transition duration-500 ${selectedProduct === 'product4' ? '' : ''
-                                }`}
+                                }`} style={{outline:'none'}}
                         >
-                            <img src={homeprod4} alt="product4" className="relative  h-full w-full md:h-[15vh] lg:h-[25vh] xl:h-[30vh] md:w-[30vw] rounded-full" />
+                            <img src={homeprod4} alt="product4" className="relative  h-full w-full scale-100 md:scale-150 lg:scale-125 rounded-full" />
                         </button>
                     </div>
                     <hr
-                        className="white-bar absolute rounded hidden md:block"
+                        className="white-bar absolute rounded hidden md:block -mt-3"
                         style={{
                             left: whiteBarStyle.left + 0.25 * whiteBarStyle.width,
                             width: 0.5 * whiteBarStyle.width,
                             height: '5px',
                             background: 'white',
-                            transition: 'left 0.3s, width 0.3s',
+                            transition: 'left 0.9s, width 0.9s',
                         }}
                     />
                 </div>
@@ -301,9 +293,9 @@ const TechProd = () => {
                     {selectedProduct && (
                         <div className='flex flex-col justify-center items-center'>
                             <img src={productImages[selectedProduct]} alt={`${selectedProduct}`} className="w-3/4 h-96  md:h-[400px] hover:scale-110 transform transition duration-500" />
-                            <p className="text-2xl mb-8 border-2 border-white p-4 bg-gray-900 md:mt-[-15vh] lg:mt-10">
+                            {/* <p className="text-2xl mb-8 border-2 border-white p-4 bg-gray-900 md:mt-[-15vh] lg:mt-10">
                                 {prodDesc[selectedProduct]}
-                            </p>
+                            </p> */}
                         </div>
                     )}
                 </div>

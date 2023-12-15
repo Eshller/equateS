@@ -103,7 +103,7 @@ const Technology = () => {
                 children: (
                   <div className="relative h-full w-full ">
                     <div className="h-full w-full relative flex items-center justify-center z-100">
-                      <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[12vh] xl:text-[14vh] text-white font-bold" style={{
+                      <h1 className="text-[4vh] sm:text-[6vh] md:text-[10vh] lg:text-[11vh] xl:text-[14vh] text-white font-bold" style={{
                           fontFamily: 'Myfont, serif',
                       }}>
                         TECHNOLOGY
@@ -134,7 +134,7 @@ const Technology = () => {
         style={{
           backgroundImage: `url(${tech2})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
+          backgroundSize:'100% 100%'
         }}>
 
         </div>
@@ -158,7 +158,26 @@ const Technology = () => {
             }}>
             </div>
           </div>
-          <div className="absolute top-[135vh] z-50">
+          <div className="absolute top-[135vh] z-50 ">
+            {/* <svg  className="absolute w-full h-full top-[-48vh] scale-x-[1.08]" width="1120" height="5307" viewBox="0 0 1120 5307" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M593 2L1062 826" stroke="#FF0000" stroke-width="6.09799"/>
+              <g filter="url(#filter0_d_161_83)">
+              <path d="M1054.12 5190.48L1027.27 5193.98M5 5248.73L1027.27 5193.98M70.0269 1088.96L1111.43 2845.66L142.818 3168.85L1003.7 3599.77L235.991 4119.02L948.375 4427.65L256.003 5294.36L1027.27 5193.98M70.0269 1088.96L1059.02 824M70.0269 1088.96L1070.66 1498.53" stroke="#FF0000" stroke-width="5.8233" shape-rendering="crispEdges"/>
+              </g>
+              <defs>
+              <filter id="filter0_d_161_83" x="0.84375" y="821.188" width="1118.93" height="4484.99" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="2"/>
+              <feComposite in2="hardAlpha" operator="out"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_161_83"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_161_83" result="shape"/>
+              </filter>
+              </defs>
+            </svg> */}
+
             <Parallax
               className="w-[13vw] rotate-12 absolute top-[37vh] left-[79vw]"
               scaleY={[1.4, 2.1]}
@@ -228,11 +247,7 @@ const Technology = () => {
               <img src={airplane1} className="scale-150 md:scale-100" alt="" />
             </Parallax>
             </div>
-        </div>
-
-        {/* <svg className=" z-50" width="4000" height="4000"><line x1="100" y1="2500" x2="100" y2="3700" stroke="red"/></svg> */}
-
-          
+        </div>    
       </div>
     </div>
   );

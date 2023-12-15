@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
-const Header = ({ activeTab, toggle }) => {
+const Header = ({ activeTab, toggle}) => {
     const [dropDown, setDropDown] = useState(false);
     const [isHeaderVisible, setHeaderVisible] = useState(true);
     const dropdownRef = useRef(null);
@@ -86,7 +86,7 @@ const Header = ({ activeTab, toggle }) => {
                         )}
                     </button>
                 </div>
-                <nav className="space-x-20 pr-20 text-2xl flex text-white hidden lg:flex p-2">
+                <nav className="space-x-10 pr-10 text-2xl flex text-white hidden lg:flex">
                     <NavLink
                         exact='true' to="/"
                         className={`relative group flex items-center justify-center ${activeTab === 'home' ? 'text-purple-500 hover:text-purple-500' : 'hover:text-white'}`}
@@ -119,24 +119,24 @@ const Header = ({ activeTab, toggle }) => {
                         <div className="h-1 w-full -mb-2 bg-violet-600 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                         About Us
                     </NavLink>
-                    {/* <NavLink
+                    <NavLink
                         to="/contact"
-                        className={` p-3 hover:bg-blue-500 hover:scale-110 transition duration-500 ${activeTab === 'contact' ? 'bg-gray-200 text-purple-700 hover:text-purple-700' : 'bg-purple-700 hover:text-white text-white'}`}
+                        className={` p-3 hover:bg-purple-600 hover:scale-110 transition duration-500 ${activeTab === 'contact' ? 'bg-purple-400 text-purple-700 hover:text-white' : 'bg-purple-800 hover:text-white text-white'}`}
                         onClick={() => toggle('contact')}
                     >
                         Contact Us
-                    </NavLink> */}
+                    </NavLink>
 
                 </nav>
                 <nav
-                    className={`absolute right-4 top-20 mt-2 w-5/6 truncate text-center bg-black text-2xl text-white font-krona border border-gray-300 rounded-lg shadow-lg overflow-hidden ${dropDown ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-                        } transition-all duration-300 transform origin-top lg:hidden`}
+                    className={`absolute right-4 top-20 mt-2 w-5/6 md:w-2/4 truncate text-center bg-black text-2xl text-white font-krona border border-gray-300 rounded-lg shadow-lg overflow-hidden ${dropDown ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+                        } transition-all duration-300 transform origin-top lg:hidden`} style={{zIndex:'9999'}}
                 >
-                    <Link to="/" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'home' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('home'); toggleDropDown(); }}> Home </Link>
-                    <Link to="/technology" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'technology' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('technology'); toggleDropDown(); }}> Technology </Link>
-                    <Link to="/products" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'products' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('products'); toggleDropDown(); }}> Products </Link>
-                    <Link to="/about" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'about' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('about'); toggleDropDown(); }}> About Us </Link>
-                    {/* <Link to="/contact" className={`block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'contact' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('contact'); toggleDropDown(); }}> Contact Us </Link> */}
+                    <Link to="/" style={{zIndex:'9999'}} className={`relative block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'home' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('home'); toggleDropDown(); }}> Home </Link>
+                    <Link to="/technology" style={{zIndex:'9999'}} className={`relative block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'technology' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('technology'); toggleDropDown(); }}> Technology </Link>
+                    <Link to="/products" style={{zIndex:'9999'}} className={ `relative block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'products' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('products'); toggleDropDown(); }}> Products </Link>
+                    <Link to="/about" style={{zIndex:'9999'}} className={`relative block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'about' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('about'); toggleDropDown(); }}> About Us </Link>
+                    <Link to="/contact" style={{zIndex:'9999'}} className={`relative block p-4 transition duration-300 hover:bg-gray-800 ${activeTab === 'contact' ? 'bg-gray-800 text-purple-500' : ''}`} onClick={() => { toggle('contact'); toggleDropDown(); }}> Contact Us </Link>
                 </nav>
             </div>
         </header>
