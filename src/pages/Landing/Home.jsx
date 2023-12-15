@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div className="text-white text-center items-center h-screen flex flex-col p-10 md:p-40 w-full">
       <div
-        className="absolute top-[55vh] sm:top-[55vh] md:top-[59vh] lg:top-[53vh] flex justify-center items-center left-[2vw] md:left-[2vw] lg:left-[-5vw] h-[30vh] md:h-[34vh] lg:h-[45vh] w-[91vw] md:w-[44vw] lg:w-[55vw"
+        className="absolute top-[55vh] sm:top-[55vh] md:top-[59vh] lg:top-[70vh] flex justify-center items-center left-[2vw] md:left-[2vw] lg:left-[-8vw] h-[30vh] md:h-[34vh] lg:h-[45vh] w-[91vw] md:w-[44vw] lg:w-[55vw"
         // style={{
         //   backgroundImage: `url(${home_bg})`,
         //   backgroundSize: 'cover',
@@ -37,7 +37,7 @@ const Home = () => {
         // }}
       >
         {/* <div style={vectorImage1} className="md:block "></div> */}
-        <div style={vectorImage2} className="relative w-full h-full p-3"></div>
+        <div style={vectorImage2} className="relative w-full h-full "></div>
       </div>
 
       <h1 className="uppercase mt-[80px] text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold z-10">

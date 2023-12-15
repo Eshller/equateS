@@ -231,7 +231,7 @@ const TechProd = () => {
 
             {/* Our Products */}
             <div
-                className="md:h-screen md:flex justify-center items-center text-white p-2 overflow-hidden"
+                className="md:h-[50vh] lg:h-screen md:flex justify-center items-center text-white p-2 overflow-hidden"
             >
                 <div
                     className="container text-center mx-auto p-4 px-10 md:w-1/2 md:h-2/3 lg:w-2/3 lg:h-2/3 rounded-xl flex flex-col md:block items-center justify-center"
@@ -244,7 +244,7 @@ const TechProd = () => {
                     <p className="text-lg xl:text-2xl mb-8 h-12 lg:h-16 xl:h-24">
                         {prodDesc[selectedProduct]}
                     </p>
-                    <div className="md:flex md:flex-row flex-col justify-center items-center lg:mt-12 xl:mt-8 mt-20 md:mt-20">
+                    <div className="md:flex md:flex-row flex-col justify-center items-center relative lg:mt-12 xl:mt-6 mt-20 md:mt-20">
                         <button
                             id="button-product1"
                             onClick={() => handleProductClick('product1')}
@@ -279,7 +279,7 @@ const TechProd = () => {
                         </button>
                     </div>
                     <hr
-                        className="white-bar absolute rounded hidden md:block"
+                        className="white-bar absolute rounded hidden md:block -mt-3"
                         style={{
                             left: whiteBarStyle.left + 0.25 * whiteBarStyle.width,
                             width: 0.5 * whiteBarStyle.width,
